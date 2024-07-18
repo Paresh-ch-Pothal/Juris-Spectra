@@ -1,5 +1,6 @@
 import React from 'react'
 import jurisLogo from '../assets/juris_spectra_logo.jpg'
+import { Link } from 'react-router-dom'
 
 const Navbar = () => {
     return (
@@ -14,25 +15,25 @@ const Navbar = () => {
                     <div className="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul className="navbar-nav me-auto mb-2 mb-lg-0">
                             <li className="nav-item">
-                                <a className="nav-link" aria-current="page" href="/">Home</a>
+                                <Link className="nav-link mx-1" aria-current="page" to="/">Home</Link>
                             </li>
                             <li className="nav-item">
-                                <a className="nav-link" href="/">About</a>
+                                <Link className="nav-link mx-1" to="/about">About</Link>
                             </li>
                             <li className="nav-item">
-                                <a className="nav-link" href="/">Privacy Policy</a>
+                                <a className="nav-link mx-1" href="/">Privacy Policy</a>
                             </li>
                             <li className="nav-item">
-                                <a className="nav-link" href="/">Careers</a>
+                                <a className="nav-link mx-1" href="/">Careers</a>
                             </li>
                             <li className="nav-item">
-                                <a className="nav-link" href="/">Team Members</a>
+                                <a className="nav-link mx-1" href="/">Team Members</a>
                             </li>
                             <li className="nav-item">
-                                <a className="nav-link" href="/">Event</a>
+                                <a className="nav-link mx-1" href="/">Event</a>
                             </li>
                             <li className="nav-item">
-                                <a className="nav-link" href="/">Contact</a>
+                                <a className="nav-link mx-1" href="/">Contact</a>
                             </li>
                         </ul>
                         <form className="d-flex" role="search">
