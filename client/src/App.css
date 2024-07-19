@@ -1,87 +1,151 @@
 /* //css for hoem page */
 
-.homepage{
+.homepage {
   height: 100%;
   width: 100%;
   display: flex;
   gap: 20px;
 }
 
-.right{
-  height: 100%;
+.right {
+  max-height: 130vh;
   width: 70%;
   margin-left: 20px;
+  overflow-y: scroll;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
 }
 
-.right img{
+.right::-webkit-scrollbar {
+  display: none;
+}
+
+.right img {
   height: 170px;
   width: 170px;
 }
 
-.avatarimg{
+.avatarimg {
   height: 15px;
   width: 15px;
 }
 
-.author{
+.author {
   display: flex;
   gap: 15px;
 }
 
-.avatar{
+.avatar {
   font-size: 12px;
 }
 
-.homecard{
+.homecard {
   display: flex;
   width: 69%;
 }
 
-.homecardtext{
+.homecardtext {
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
 
-.para{
+.para {
   width: 50vw;
 }
 
+.rightbutton {
+  display: flex;
+  justify-content: center;
+}
 
-.left{
-  height: 100%;
-  width: 25%;
+.rightbutton button {
+  width: 50%;
 }
 
 
-.leftimg{
+.left {
+  max-height: 130vh;
+  width: 25%;
+  overflow-y: scroll;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.left::-webkit-scrollbar {
+  display: none;
+}
+
+
+.leftimg {
   width: 80px;
   height: 70px;
 }
 
-.date{
+.date {
   font-size: 12px;
 }
 
-.avatarimgleft{
+.avatarimgleft {
   width: 15px;
   height: 15px;
 }
 
-.line{
+.line {
   height: 1px;
   width: 100%;
   background-color: rgba(128, 128, 128, 0.305);
 }
 
+.box {
+  width: 27%;
+  padding: 5px 8px;
+  border: 1px solid black;
+  background-color: black;
+  color: white;
+}
+
+.socialLogo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.socialLogo li {
+  list-style: none;
+  width: 50%;
+}
+
+.socialLogo li:first-child {
+  background-color: #0099ff;
+}
+
+.socialLogo li:nth-child(2) {
+  background-color: #f18b4b;
+}
+
+.socialLogo li a {
+  text-decoration: none;
+}
+
+.list1stImg img {
+  width: 50px;
+  height: 50px;
+}
+
+.list2ndImg img {
+  width: 50px;
+  height: 50px;
+}
+
 /* //css for visitpage */
-.visitpage{
+.visitpage {
   width: 100%;
   height: 100%;
   margin-top: 20px;
 }
 
-.phase1{
+.phase1 {
   margin: auto;
   width: 60%;
   display: flex;
@@ -90,44 +154,149 @@
   flex-direction: column;
 }
 
-.visitpageimg{
+.visitpageimg {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.visitpageimg img{
+.visitpageimg img {
   width: 300px;
   height: 300px;
 }
 
-@media only screen and (max-width: 900px){
-  .homepage{
+
+/* //css for search page */
+.homecardsearch {
+  display: flex;
+  margin: auto;
+  width: 70%;
+}
+
+.homecardsearch img {
+  height: 170px;
+  width: 170px;
+}
+
+.homecardtextsearch {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* //css for footer */
+.footer {
+  overflow-x: hidden;
+  background-color: rgba(14, 13, 13, 0.953);
+  height: 25vh;
+  width: 100vw;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  color: white;
+}
+
+.footer li {
+  text-decoration: none;
+  list-style: none;
+  cursor: pointer;
+}
+
+.footerEnd {
+  text-align: center;
+  color: white;
+  padding: 10px 0px;
+  height: 5vh;
+  background-color: rgba(14, 13, 13, 0.953);
+}
+
+.footer2{
+  width: 20vw;
+  margin: auto;
+}
+
+
+@media only screen and (max-width: 900px) {
+  .homepage {
     flex-direction: column;
   }
 
-  .right{
+  .right {
     width: 100%;
+    max-height: 100%;
+    overflow: auto;
   }
 
-  .left{
+  .left {
     width: 100%;
+    max-height: 100%;
+    overflow: auto;
   }
 
-  .homecard{
+  .socialLogo {
+    flex-direction: row;
+    gap: 0px;
+  }
+
+  .homecard {
     width: 95%;
     flex-direction: column;
     justify-content: center;
     align-items: center;
   }
 
-  .homecard img{
-    width: 70%;
+  .homecard img {
+    width: 100%;
     height: 90%;
     margin-bottom: 30px;
   }
 
-  .para{
+  .para {
     width: 93vw;
+  }
+
+
+  .homecardsearch {
+    width: 95%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .homecardsearch img {
+    width: 100%;
+    height: 90%;
+    margin-bottom: 30px;
+  }
+
+  .footer {
+    height: 55vh;
+    flex-wrap: wrap;
+    width: 100vw;
+  }
+
+  .footer li {
+    margin: 0px;
+    padding: 0px;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  .footer1 {
+    width: 100%;
+    margin: 30px 0px;
+  }
+
+  .footer2{
+    margin: auto;
+    width: 70vw;
+  }
+
+  .footerEnd {
+    font-size: 12px;
   }
 }

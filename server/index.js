@@ -5,6 +5,7 @@ const cors = require('cors');
 const bodyParser=require("body-parser");
 const newsLargeRoutes=require("./routes/newslarge");
 const newsSmallRoutes=require("./routes/newssmall");
+const searchRoutes=require("./routes/search");
 
 ConnectToMongoDb();
 const port=5000;
@@ -18,6 +19,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use("/api",newsLargeRoutes);
 app.use("/api",newsSmallRoutes);
+app.use("/api",searchRoutes);
 
 
 app.listen(port,()=>{
