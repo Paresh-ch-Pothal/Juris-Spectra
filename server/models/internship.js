@@ -11,12 +11,15 @@ const descItemSchema = new Schema({
     desc: {
         type: String,
     },
+    link:{
+        type: String
+    },
     table:{
         type: String
     }
 });
 
-const newsSmallSchema=new Schema({
+const InternshipSchema=new Schema({
     title: {
         type: String,
     },
@@ -26,7 +29,7 @@ const newsSmallSchema=new Schema({
     homedesc:{
         type: String
     },
-    newsimg:{
+    internimg:{
         type: String
     },
     desc:{
@@ -38,5 +41,5 @@ const newsSmallSchema=new Schema({
     
 })
 
-const NewsSmall=mongoose.model('newssmall',newsSmallSchema);
-module.exports=NewsSmall;
+const Internship=mongoose.model('internship',InternshipSchema);
+module.exports=Internship;

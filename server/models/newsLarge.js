@@ -10,6 +10,9 @@ const descItemSchema = new Schema({
     },
     desc: {
         type: String,
+    },
+    table:{
+        type: String
     }
 });
 

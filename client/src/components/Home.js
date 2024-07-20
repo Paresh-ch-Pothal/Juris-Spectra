@@ -104,7 +104,7 @@ const Home = () => {
                               <RxAvatar className='mx-1 avatarimg' /><span>{news.author}</span>
                             </div>
                             <div className='date'>
-                              <CiClock2 className='avatarimg' /> <span>{formatDate(Date.now())}</span>
+                              <CiClock2 className='avatarimg' /> <span>{formatDate(news.createdAt)}</span>
                             </div>
                           </div>
                           <p className="mx-2 para">{news.homedesc}</p>
@@ -137,7 +137,7 @@ const Home = () => {
                       <h5 style={{ cursor: "pointer" }} onClick={() => { handlesmallNews(news._id) }} className='mx-2'>{news.title}</h5>
                       <div className='author'>
                         <div className='date mx-2'>
-                          <CiClock2 className='avatarimgleft' /> <span>{formatDate(Date.now())}</span>
+                          <CiClock2 className='avatarimgleft' /> <span>{formatDate(news.createdAt)}</span>
                         </div>
                       </div>
                     </div>
@@ -154,11 +154,11 @@ const Home = () => {
             <div className='box'>Follow Us</div>
               <div className="linebox" style={{height: "3px",background: "black"}}></div>
               <div className='socialLogo'>
-                <li className='list1stImg'>
+                <li className='list1stImg ml-1'>
                   {/* here to be updated the href value */}
                   <a href=""><img src={linkedin} alt="" /><span className='mx-2' style={{fontSize: "1.2rem",color: "white"}}>Linkedin</span></a>  
                 </li>
-                <li className='list2ndImg'>
+                <li className='list2ndImg mr-1'>
                   <a href=""><img src={instagram} alt="" /><span className='mx-2' style={{fontSize: "1.2rem",color: "white"}}>Instagram</span></a>
                 </li>
               </div>

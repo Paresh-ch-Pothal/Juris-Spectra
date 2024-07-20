@@ -37,6 +37,9 @@ const VisitPageLarge = () => {
                         <div className='visitpara'>
                             {news.desc && <p>{news.desc}</p>}
                         </div>
+                        <div className='table'>
+                            {news.table && <div dangerouslySetInnerHTML={{ __html: news.table }} />}
+                        </div>
                     </div>
                 ))}
             </div>

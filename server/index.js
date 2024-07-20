@@ -6,6 +6,7 @@ const bodyParser=require("body-parser");
 const newsLargeRoutes=require("./routes/newslarge");
 const newsSmallRoutes=require("./routes/newssmall");
 const searchRoutes=require("./routes/search");
+const internRoutes=require("./routes/internship");
 
 ConnectToMongoDb();
 const port=5000;
@@ -20,6 +21,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use("/api",newsLargeRoutes);
 app.use("/api",newsSmallRoutes);
 app.use("/api",searchRoutes);
+app.use("/api",internRoutes);
 
 
 app.listen(port,()=>{

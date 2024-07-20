@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import jurisLogo from '../assets/juris_spectra_logo.jpg'
 import { Link, useLocation, useNavigate } from 'react-router-dom'
-import SearchPage from './SearchPage';
+import SearchPageNews from './SearchPageNews';
 import { ToastContainer, toast ,Bounce} from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
@@ -10,13 +10,12 @@ const Navbar = () => {
     const host = "http://localhost:5000";
 
     const [search, setsearch] = useState('')
-    const [data, setdata] = useState([])
     let history = useNavigate();
 
     const handleSearchSubmit = (e) => {
         e.preventDefault()
         setsearch(search)
-        history(`/searchpage?search=${encodeURIComponent(search)}`);
+        history(`/searchpagenews?search=${encodeURIComponent(search)}`);
     }
 
     const handleOnchange = (e) => {
@@ -26,56 +25,56 @@ const Navbar = () => {
     }
 
     const location = useLocation();
-    const queryParams = new URLSearchParams(location.search);
-    const searchQuery = queryParams.get("search");
-    console.log(searchQuery)
+    // const queryParams = new URLSearchParams(location.search);
+    // const searchQuery = queryParams.get("search");
+    // // console.log(searchQuery)
 
-    const searchData = async (query) => {
-        const response = await fetch(`${host}/api/searchdata?search=${encodeURIComponent(query)}`, {
-            method: "GET",
-        });
-        const data = await response.json();
-        if (data.success) {
-            toast.success('Fetched All the details', {
-                position: "top-left",
-                autoClose: 3000,
-                hideProgressBar: false,
-                closeOnClick: true,
-                pauseOnHover: true,
-                draggable: true,
-                progress: undefined,
-                theme: "light",
-                transition: Bounce,
-                });
-            setdata(data.result)
-        }
-        else{
-            toast.error('No Such results Found', {
-                position: "top-left",
-                autoClose: 3000,
-                hideProgressBar: false,
-                closeOnClick: true,
-                pauseOnHover: true,
-                draggable: true,
-                progress: undefined,
-                theme: "light",
-                transition: Bounce,
-                });
-            setdata(["Not Found"])
-        }
-        console.log(data.result);
-    }
+    // const searchData = async (query) => {
+    //     const response = await fetch(`${host}/api/searchdatanews?search=${encodeURIComponent(query)}`, {
+    //         method: "GET",
+    //     });
+    //     const data = await response.json();
+    //     if (data.success) {
+    //         toast.success('Fetched All the details', {
+    //             position: "top-left",
+    //             autoClose: 3000,
+    //             hideProgressBar: false,
+    //             closeOnClick: true,
+    //             pauseOnHover: true,
+    //             draggable: true,
+    //             progress: undefined,
+    //             theme: "light",
+    //             transition: Bounce,
+    //             });
+    //         setdata(data.result || [])
+    //     }
+    //     else{
+    //         toast.error('No Such results Found', {
+    //             position: "top-left",
+    //             autoClose: 3000,
+    //             hideProgressBar: false,
+    //             closeOnClick: true,
+    //             pauseOnHover: true,
+    //             draggable: true,
+    //             progress: undefined,
+    //             theme: "light",
+    //             transition: Bounce,
+    //             });
+    //         setdata([])
+    //     }
+    //     // console.log(data.result);
+    // }
 
-    useEffect(() => {
-        if (searchQuery) {
-            searchData(search)
-        }
-    }, [searchQuery])
+    // useEffect(() => {
+    //     if (searchQuery) {
+    //         searchData(search)
+    //     }
+    // }, [searchQuery])
 
     return (
         <>
             <div>
-                <ToastContainer
+                {/* <ToastContainer
                     position="top-left"
                     autoClose={3000}
                     hideProgressBar={false}
@@ -87,7 +86,7 @@ const Navbar = () => {
                     pauseOnHover
                     theme="light"
                     transition={Bounce}
-/>
+/> */}
                 <nav className="navbar navbar-expand-lg bg-dark navbar-dark">
                     <div className="container-fluid">
                         <img style={{ borderRadius: "120px" }} className='mx-2' src={jurisLogo} alt="Bootstrap" width="40" height="40" />
@@ -107,7 +106,7 @@ const Navbar = () => {
                                     <a className="nav-link mx-1" href="/">Privacy Policy</a>
                                 </li>
                                 <li className="nav-item">
-                                    <a className="nav-link mx-1" href="/">Careers</a>
+                                    <Link className="nav-link mx-1" to="/internship">Internships</Link>
                                 </li>
                                 <li className="nav-item">
                                     <a className="nav-link mx-1" href="/">Team Members</a>
@@ -117,7 +116,7 @@ const Navbar = () => {
                                 </li>
                                 <li className="nav-item">
                                     <a className="nav-link mx-1" href="/">Contact</a>
-                                </li>
+                                </li>s
                             </ul>
                             <form className="d-flex" role="search" onSubmit={handleSearchSubmit}>
                                 <input onChange={handleOnchange} className="form-control me-2" type="search" id='search' name='search' value={search} placeholder="Search" aria-label="Search" />
@@ -128,7 +127,7 @@ const Navbar = () => {
                 </nav>
             </div>
 
-            {location.pathname === '/searchpage' && <SearchPage data={data} />}
+            {location.pathname === '/searchpagenews' && <SearchPageNews />}
         </>
 
 
