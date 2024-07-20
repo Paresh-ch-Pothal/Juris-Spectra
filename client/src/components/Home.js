@@ -3,8 +3,6 @@ import jurisLogo from '../assets/juris_spectra_logo.jpg'
 import { RxAvatar } from "react-icons/rx";
 import { CiClock2 } from "react-icons/ci";
 import { useNavigate } from 'react-router-dom';
-import VisitPageLarge from './VisitPageLarge';
-import { ImSpinner3 } from "react-icons/im";
 import instagram from '../assets/instagram.gif'
 import linkedin from '../assets/linkedin.gif'
 

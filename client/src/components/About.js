@@ -1,5 +1,5 @@
 import React from 'react'
-import './all.css';
+// import '../../src/all.css';
 
 const About = () => {
   return (
@@ -9,12 +9,12 @@ const About = () => {
         <p className="box">Hustling Learning is a platform dedicated to providing valuable educational resources and content. We focus on offering practical insights and strategies to help individuals enhance their skills and knowledge in various fields. Our mission is to empower learners to achieve their personal and professional goals through accessible and engaging materials. Whether you're looking to improve your career prospects, acquire new skills, or simply expand your knowledge, Hustling Learning is here to support your journey.</p>
 
         <div className="founder flex">
-          <div className="left">
+          <div className="leftabout">
             <div><img src="" alt="founder" srcset="" />
               <p>Lorem ipsum dolor sit amet.</p>
             </div>
           </div>
-          <div className="right">
+          <div className="rightabout">
             <div><img src="" alt="co-founder" srcset="" />
               <p>Lorem ipsum dolor sit amet.</p>
             </div>
