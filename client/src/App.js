@@ -12,6 +12,7 @@ import Footer from './components/Footer';
 import Internship from './components/Internship';
 import InternPage from './components/InternPage';
 import PrivacyPolicy from './components/PrivacyPolicy';
+import Contact from './components/Contact';
 
 function App() {
   return (
@@ -28,6 +29,7 @@ function App() {
           <Route exact path="/internship" element={<Internship/>} />
           <Route exact path="/internpage/:id" element={<InternPage />} />
           <Route exact path="/privacypolicy" element={<PrivacyPolicy />} />
+          <Route exact path="/contact" element={<Contact />} />
         </Routes>
         <Footer/>
       </Router>

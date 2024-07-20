@@ -7,6 +7,7 @@ const newsLargeRoutes=require("./routes/newslarge");
 const newsSmallRoutes=require("./routes/newssmall");
 const searchRoutes=require("./routes/search");
 const internRoutes=require("./routes/internship");
+const userRoutes=require("./routes/user");
 
 ConnectToMongoDb();
 const port=5000;
@@ -22,6 +23,7 @@ app.use("/api",newsLargeRoutes);
 app.use("/api",newsSmallRoutes);
 app.use("/api",searchRoutes);
 app.use("/api",internRoutes);
+app.use("/api",userRoutes);
 
 
 app.listen(port,()=>{

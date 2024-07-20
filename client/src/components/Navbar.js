@@ -116,7 +116,7 @@ const Navbar = () => {
                                     <Link className="nav-link mx-1" to="/">Event</Link>
                                 </li>
                                 <li className="nav-item">
-                                    <Link className="nav-link mx-1" to="/">Contact</Link>
+                                    <Link className="nav-link mx-1" to="/contact">Contact</Link>
                                 </li>
                             </ul>
                             <form className="d-flex" role="search" onSubmit={handleSearchSubmit}>
