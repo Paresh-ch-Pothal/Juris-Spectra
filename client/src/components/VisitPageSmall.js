@@ -7,7 +7,7 @@ const VisitPageSmall = () => {
     const host = "http://localhost:5000";
 
     const fetchSmallNews = async () => {
-        const response = await fetch(`${process.env.REACT_APP_API_URL}/fetchnewssmallid/${id}`, {
+        const response = await fetch(`${process.env.REACT_APP_API_URL}/api/fetchnewssmallid/${id}`, {
             method: "GET",
         });
         const data = await response.json();

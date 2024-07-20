@@ -17,7 +17,7 @@ const Home = () => {
 
   const getlargenews = async () => {
     setloading(true)
-    const response = await fetch(`${process.env.REACT_APP_API_URL}/fetchnewslarge`, {
+    const response = await fetch(`${process.env.REACT_APP_API_URL}/api/fetchnewslarge`, {
       method: "GET",
 
     });
@@ -30,7 +30,7 @@ const Home = () => {
 
   const getsmallnews = async () => {
     setloading(true)
-    const response = await fetch(`${process.env.REACT_APP_API_URL}/fetchnewssmall`, {
+    const response = await fetch(`${process.env.REACT_APP_API_URL}/api/fetchnewssmall`, {
       method: "GET",
 
     });

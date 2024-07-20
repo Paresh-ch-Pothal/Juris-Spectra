@@ -7,7 +7,7 @@ const VisitPageLarge = () => {
     const host = "http://localhost:5000";
 
     const fetchLargeNews = async () => {
-        const response = await fetch(`${process.env.REACT_APP_API_URL}/fetchnewslargeid/${id}`, {
+        const response = await fetch(`${process.env.REACT_APP_API_URL}/api/fetchnewslargeid/${id}`, {
             method: "GET",
         });
         const data = await response.json();
