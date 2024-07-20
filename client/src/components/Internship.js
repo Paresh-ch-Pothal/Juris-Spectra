@@ -19,7 +19,7 @@ const Internship = () => {
 
     const getintern = async () => {
         setloading(true)
-        const response = await fetch(`${process.env.REACT_APP_API_URL}/api/fetchintern`, {
+        const response = await fetch(`https://juris-spectra.vercel.app/api/fetchintern`, {
             method: "GET",
 
         });

@@ -38,7 +38,7 @@ const SearchPage = () => {
     // console.log(searchQuery)
 
     const searchData = async (query) => {
-        const response = await fetch(`${process.env.REACT_APP_API_URL}/api/searchdataintern?search=${encodeURIComponent(query)}`, {
+        const response = await fetch(`https://juris-spectra.vercel.app/api/searchdataintern?search=${encodeURIComponent(query)}`, {
             method: "GET",
         });
         const json = await response.json();
