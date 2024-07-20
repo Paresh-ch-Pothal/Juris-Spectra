@@ -14,7 +14,7 @@ const Contact = () => {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-        const response = await fetch(`${host}/api/user`, {
+        const response = await fetch(`${process.env.REACT_APP_API_URL}/user`, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"

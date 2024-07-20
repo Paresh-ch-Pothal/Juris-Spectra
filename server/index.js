@@ -8,9 +8,10 @@ const newsSmallRoutes=require("./routes/newssmall");
 const searchRoutes=require("./routes/search");
 const internRoutes=require("./routes/internship");
 const userRoutes=require("./routes/user");
+require('dotenv').config();
 
 ConnectToMongoDb();
-const port=5000;
+const port=process.env.PORT || 5000;
 
 const app=express()
 app.use(bodyParser.json());

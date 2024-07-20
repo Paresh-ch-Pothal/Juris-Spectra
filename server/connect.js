@@ -1,6 +1,10 @@
 const mongoose=require("mongoose");
+require('dotenv').config();
+
+const mongoUrl = process.env.MONGO;
+
 const ConnectToMongoDb=async()=>{
-    return await mongoose.connect("mongodb+srv://pareshchandrapotha:paresh9339@cluster0.lwa4inv.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0").then(()=>{
+    return await mongoose.connect(mongoUrl).then(()=>{
         console.log("MongoDb is connected");
     }).catch(()=>{
         console.log("MOngoDb is not Connected");
