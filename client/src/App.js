@@ -11,6 +11,7 @@ import SearchPageIntern from './components/SearchPageIntern';
 import Footer from './components/Footer';
 import Internship from './components/Internship';
 import InternPage from './components/InternPage';
+import PrivacyPolicy from './components/PrivacyPolicy';
 
 function App() {
   return (
@@ -26,6 +27,7 @@ function App() {
           <Route exact path="/searchpageintern" element={<SearchPageIntern/>} />
           <Route exact path="/internship" element={<Internship/>} />
           <Route exact path="/internpage/:id" element={<InternPage />} />
+          <Route exact path="/privacypolicy" element={<PrivacyPolicy />} />
         </Routes>
         <Footer/>
       </Router>

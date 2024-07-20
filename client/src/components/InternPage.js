@@ -27,22 +27,22 @@ const InternPage = () => {
                 <div className='visitpageimg'>
                     <img src={info.internimg ? info.internimg : "https://www.livelaw.in/cms/wp-content/uploads/2013/11/Law-School-Internship.jpg"} alt="" />
                 </div>
-                {Array.isArray(info.desc) && info.desc.map((news, index) => (
-                    <div className='phase1' key={index}>
+                {Array.isArray(info.desc) && info.desc.map((intern, index) => (
+                    <div className='phase1' key={intern._id}>
                         <div className='head'>
-                            {news.h1 && <h3 style={{ textAlign: "center" }}>{news.h1}</h3>}
+                            {intern.h1 && <h3 style={{ textAlign: "center" }}>{intern.h1}</h3>}
                         </div>
                         <div className='subhead'>
-                            {news.sub1 && <h5 style={{ textAlign: "center" }}>{news.sub1}</h5>}
+                            {intern.sub1 && <h5 style={{ textAlign: "center" }}>{intern.sub1}</h5>}
                         </div>
                         <div className='visitpara'>
-                            {news.desc && <p>{news.desc}</p>}
+                            {intern.desc && <p>{intern.desc}</p>}
                         </div>
                         <div className='table'>
-                            {news.table && <div dangerouslySetInnerHTML={{ __html: news.table }} />}
+                            {intern.table && <div dangerouslySetInnerHTML={{ __html: intern.table }} />}
                         </div>
-                        { news.link && <div>
-                            <a href={news.link} target="_blank" rel="noopener noreferrer"><button className="btn btn-outline-success my-4" type="button">Click Here</button></a>
+                        { intern.link && <div>
+                            <a href={intern.link} target="_blank" rel="noopener noreferrer"><button className="btn btn-outline-success my-4" type="button">Click Here</button></a>
                         </div> }
                     </div>
                 ))}

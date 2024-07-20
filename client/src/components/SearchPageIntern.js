@@ -96,22 +96,22 @@ const SearchPage = () => {
                 theme="light"
                 transition={Bounce}
             /> */}
-            {data.length > 0 ? data.map((news) => {
+            {data.length > 0 ? data.map((intern) => {
                 return (
                     <>
-                        <div className='homecardsearch my-2' key={news._id}>
-                            <img onClick={() => { handleintern(news._id) }} style={{ cursor: "pointer" }} src={news.internimg ? news.newsimg : "https://www.livelaw.in/cms/wp-content/uploads/2013/11/Law-School-Internship.jpg"} alt="" />
+                        <div className='homecardsearch my-2' key={intern._id}>
+                            <img onClick={() => { handleintern(intern._id) }} style={{ cursor: "pointer" }} src={intern.internimg ? intern.internimg : "https://www.livelaw.in/cms/wp-content/uploads/2013/11/Law-School-Internship.jpg"} alt="" />
                             <div className='homecardtextsearch'>
-                                <h3 onClick={() => { handleintern(news._id) }} style={{ cursor: "pointer" }} className='mx-2'>{news.title ? news.title : "No Result"}</h3>
+                                <h3 onClick={() => { handleintern(intern._id) }} style={{ cursor: "pointer" }} className='mx-2'>{intern.title ? intern.title : "No Result"}</h3>
                                 <div className='author'>
                                     <div className='avatar'>
-                                        <RxAvatar className='mx-1 avatarimg' /><span>{news.author}</span>
+                                        <RxAvatar className='mx-1 avatarimg' /><span>{intern.author}</span>
                                     </div>
                                     <div className='date'>
-                                        <CiClock2 className='avatarimg' /> <span>{formatDate(news.createdAt)}</span>
+                                        <CiClock2 className='avatarimg' /> <span>{formatDate(intern.createdAt)}</span>
                                     </div>
                                 </div>
-                                <p className="mx-2 para">{news.homedesc}</p>
+                                <p className="mx-2 para">{intern.homedesc}</p>
                             </div>
                         </div>
                         <div className='line'></div>

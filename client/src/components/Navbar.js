@@ -25,6 +25,7 @@ const Navbar = () => {
     }
 
     const location = useLocation();
+    console.log(location.pathname)
     // const queryParams = new URLSearchParams(location.search);
     // const searchQuery = queryParams.get("search");
     // // console.log(searchQuery)
@@ -103,24 +104,24 @@ const Navbar = () => {
                                     <Link className="nav-link mx-1" to="/about">About</Link>
                                 </li>
                                 <li className="nav-item">
-                                    <a className="nav-link mx-1" href="/">Privacy Policy</a>
+                                    <Link className="nav-link mx-1" to="/privacypolicy">Privacy Policy</Link>
                                 </li>
                                 <li className="nav-item">
                                     <Link className="nav-link mx-1" to="/internship">Internships</Link>
                                 </li>
                                 <li className="nav-item">
-                                    <a className="nav-link mx-1" href="/">Team Members</a>
+                                    <Link className="nav-link mx-1" to="/">Team Members</Link>
                                 </li>
                                 <li className="nav-item">
-                                    <a className="nav-link mx-1" href="/">Event</a>
+                                    <Link className="nav-link mx-1" to="/">Event</Link>
                                 </li>
                                 <li className="nav-item">
-                                    <a className="nav-link mx-1" href="/">Contact</a>
-                                </li>s
+                                    <Link className="nav-link mx-1" to="/">Contact</Link>
+                                </li>
                             </ul>
                             <form className="d-flex" role="search" onSubmit={handleSearchSubmit}>
-                                <input onChange={handleOnchange} className="form-control me-2" type="search" id='search' name='search' value={search} placeholder="Search" aria-label="Search" />
-                                <button className="btn btn-outline-success" type="submit">Search</button>
+                                <input style={{ display: location.pathname === "/internship" ? "none" : "block" }}  onChange={handleOnchange} className="form-control me-2" type="search" id='search' name='search' value={search} placeholder="Search" aria-label="Search" />
+                                <button style={{ display: location.pathname === "/internship" ? "none" : "block" }} className="btn btn-outline-success" type="submit">Search</button>
                             </form>
                         </div>
                     </div>
