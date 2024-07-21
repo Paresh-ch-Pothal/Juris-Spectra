@@ -78,7 +78,7 @@ const Home = () => {
   }
 
   return (
-    <div>
+    <div style={{overflowX: "hidden"}}>
       <div className="homepage">
         <div className="right mt-4">
           {loading ? (

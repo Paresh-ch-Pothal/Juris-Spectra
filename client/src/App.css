@@ -330,6 +330,10 @@ body {
 
 
 @media only screen and (max-width: 900px) {
+  body{
+    overflow-x: hidden;
+  }
+
   .homepage {
     flex-direction: column;
   }
@@ -428,6 +432,10 @@ body {
     width: 100%;
     height: 90%;
     margin-bottom: 30px;
+  }
+
+  .phase1{
+    width: 90%;
   }
 
   .outer {
