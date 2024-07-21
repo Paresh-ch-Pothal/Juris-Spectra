@@ -14,6 +14,8 @@ import InternPage from './components/InternPage';
 import PrivacyPolicy from './components/PrivacyPolicy';
 import Contact from './components/Contact';
 import NewsTicker from './components/NewsTicker';
+import AddLargeNews from './components/AddLargeNews';
+
 
 function App() {
 
@@ -40,6 +42,7 @@ function App() {
           <Route exact path="/privacypolicy" element={<PrivacyPolicy />} />
           <Route exact path="/contact" element={<Contact />} />
           <Route exact path="/newsticker" element={<NewsTicker />} />
+          <Route exact path="/addlargenews" element={<AddLargeNews />} />
         </Routes>
         <Footer />
       </Router>
