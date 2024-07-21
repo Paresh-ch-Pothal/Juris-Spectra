@@ -13,6 +13,9 @@ const descItemSchema = new Schema({
     },
     table:{
         type: String
+    },
+    link:{
+        type: String
     }
 });
 

@@ -41,6 +41,9 @@ const VisitPageLarge = () => {
                         <div className='table'>
                             {news.table && <div dangerouslySetInnerHTML={{ __html: news.table }} />}
                         </div>
+                        {news.link && <div>
+                            <a href={news.link} target="_blank" rel="noopener noreferrer"><button className="btn btn-outline-success my-4" type="button">Click Here</button></a>
+                        </div>}
                     </div>
                 ))}
             </div>
