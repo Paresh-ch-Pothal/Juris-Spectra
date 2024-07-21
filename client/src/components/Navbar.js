@@ -9,6 +9,7 @@ const Navbar = () => {
 
     // const host = "http://localhost:5000";
 
+
     const [search, setsearch] = useState('')
     let history = useNavigate();
 
@@ -120,7 +121,7 @@ const Navbar = () => {
                                 </li>
                             </ul>
                             <form className="d-flex" role="search" onSubmit={handleSearchSubmit}>
-                                <input style={{ display: location.pathname === "/internship" ? "none" : "block" }}  onChange={handleOnchange} className="form-control me-2" type="search" id='search' name='search' value={search} placeholder="Search" aria-label="Search" />
+                                <input style={{ display: location.pathname === "/internship" ? "none" : "block" }} onChange={handleOnchange} className="form-control me-2" type="search" id='search' name='search' value={search} placeholder="Search" aria-label="Search" />
                                 <button style={{ display: location.pathname === "/internship" ? "none" : "block" }} className="btn btn-outline-success" type="submit">Search</button>
                             </form>
                         </div>

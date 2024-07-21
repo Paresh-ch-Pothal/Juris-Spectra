@@ -328,6 +328,39 @@ body {
 }
 
 
+/* // css for news ticker */
+.ticker-container {
+  overflow: hidden;
+  white-space: nowrap;
+  background-color: #000;
+  color: #fff;
+  padding: 10px 0;
+  display: flex;
+  align-items: center;
+}
+
+.ticker {
+  display: inline-block;
+  animation: ticker 20s linear infinite;
+  white-space: nowrap;
+}
+
+.ticker-item {
+  display: inline-block;
+  padding: 0 50px;
+}
+
+@keyframes ticker {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+
+
 
 @media only screen and (max-width: 900px) {
   body{

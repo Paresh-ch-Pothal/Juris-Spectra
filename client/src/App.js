@@ -13,25 +13,35 @@ import Internship from './components/Internship';
 import InternPage from './components/InternPage';
 import PrivacyPolicy from './components/PrivacyPolicy';
 import Contact from './components/Contact';
+import NewsTicker from './components/NewsTicker';
 
 function App() {
+
+  const headlines = [
+    'Breaking News: Market hits an all-time high!',
+    'Sports Update: Local team wins championship!',
+    'Weather Alert: Heavy rain expected tomorrow!',
+    // Add more headlines as needed
+  ];
   return (
     <>
       <Router>
-        <Navbar/>
+        <Navbar />
+        <NewsTicker headlines={headlines} />
         <Routes>
-          <Route exact path="/" element={<Home/>} />
-          <Route exact path="/about" element={<About/>} />
+          <Route exact path="/" element={<Home />} />
+          <Route exact path="/about" element={<About />} />
           <Route exact path="/visitpagelarge/:id" element={<VisitPageLarge />} />
           <Route exact path="/visitpagesmall/:id" element={<VisitPageSmall />} />
-          <Route exact path="/searchpagenews" element={<SearchPageNews/>} />
-          <Route exact path="/searchpageintern" element={<SearchPageIntern/>} />
-          <Route exact path="/internship" element={<Internship/>} />
+          <Route exact path="/searchpagenews" element={<SearchPageNews />} />
+          <Route exact path="/searchpageintern" element={<SearchPageIntern />} />
+          <Route exact path="/internship" element={<Internship />} />
           <Route exact path="/internpage/:id" element={<InternPage />} />
           <Route exact path="/privacypolicy" element={<PrivacyPolicy />} />
           <Route exact path="/contact" element={<Contact />} />
+          <Route exact path="/newsticker" element={<NewsTicker />} />
         </Routes>
-        <Footer/>
+        <Footer />
       </Router>
     </>
   );

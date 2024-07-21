@@ -5,6 +5,7 @@ import { CiClock2 } from "react-icons/ci";
 import { useNavigate } from 'react-router-dom';
 import instagram from '../assets/instagram.webp'
 import linkedin from '../assets/linkedin.webp'
+import NewsTicker from './NewsTicker';
 
 const Home = () => {
 
@@ -78,8 +79,11 @@ const Home = () => {
     setcount((prevCount) => prevCount + 5);
   }
 
+
+
   return (
     <div style={{ overflowX: "hidden" }}>
+      
       <div className="homepage">
         <div className="right mt-4">
           {loading ? (
