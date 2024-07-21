@@ -25,7 +25,7 @@ const Navbar = () => {
     }
 
     const location = useLocation();
-    console.log(location.pathname)
+    // console.log(location.pathname)
     // const queryParams = new URLSearchParams(location.search);
     // const searchQuery = queryParams.get("search");
     // // console.log(searchQuery)

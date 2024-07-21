@@ -48,7 +48,7 @@ const Contact = () => {
                 transition: Slide,
             });
         }
-        console.log(data);
+        // console.log(data);
     }
 
     const handleChange = (e) => {
