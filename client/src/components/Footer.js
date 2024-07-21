@@ -1,36 +1,44 @@
 import React from 'react'
 import instagram from '../assets/instagram.webp'
 import linkedin from '../assets/linkedin.webp'
+import { Link, useLocation, useNavigate } from 'react-router-dom'
 
 
 const Footer = () => {
+
+    let navigate=useNavigate();
+    const handleSubscribe=()=>{
+        navigate("/contact")
+    }
+
     return (
         <>
             <div className='footer'>
                 <div style={{ textAlign: "center" }} className='footer1'><h4 className='mx-2'>Juris Spectra</h4>
                     <div className='footer2'>A comprehensive platform offering law students daily news, internships, and career opportunities in the legal field.</div>
+                    <button onClick={handleSubscribe} className="my-4 subscribe text-center" type="button">Subscribe</button>
                 </div>
 
                 <div>
                     <ul>
-                        <li><img src={linkedin} className='mx-2' alt="html" width="40" height="40" style={{ borderRadius: "20px", cursor: "pointer" }} /><span>LinkedIn</span></li>
-                        <li className='my-3'><img src={instagram} className='mx-2' alt="html" width="40" height="40" style={{ borderRadius: "20px", cursor: "pointer" }} /><span>Instagram</span></li>
+                        <li><a href="https://www.linkedin.com/company/juris-spectra/" style={{listStyle: "none",textDecoration: "none",color: "white"}}><img  src={linkedin} className='mx-2' alt="html" width="40" height="40" style={{ borderRadius: "20px", cursor: "pointer" }} /><span>LinkedIn</span></a></li>
+                        <li className='my-3'><a href="https://www.instagram.com/jurisspectra?igsh=MTZwYWZ5ZGEzMnExMw==" style={{listStyle: "none",textDecoration: "none",color: "white"}}><img src={instagram} className='mx-2' alt="html" width="40" height="40" style={{ borderRadius: "20px", cursor: "pointer" }} /><span>Instagram</span></a></li>
                     </ul>
                 </div>
                 <div>
                     <ul>
-                        <li><span><a href="">Home</a></span></li>
-                        <li className='my-1'><span><a href="">About</a></span></li>
-                        <li className='my-1'><span><a href="">Contact</a></span></li>
-                        <li className='my-1'><span><a href="">Team</a></span></li>
+                        <li><span><Link to="/">Home</Link></span></li>
+                        <li className='my-1'><span><Link to="/about">About</Link></span></li>
+                        <li className='my-1'><span><Link to="/contact">Contact</Link></span></li>
+                        <li className='my-1'><span><Link to="/teammembers">Team</Link></span></li>
                     </ul>
                 </div>
                 <div>
                     <ul>
-                        <li><span><a href="">Privacy</a></span></li>
-                        <li className='my-1'><span><a href="">Event</a></span></li>
-                        <li className='my-1'><span><a href="">Internships</a></span></li>
-                        <li className='my-1'><span><a href="">About</a></span></li>
+                        <li><span><Link to="/privacypolicy">Privacy</Link></span></li>
+                        <li className='my-1'><span><Link to="/event">Event</Link></span></li>
+                        <li className='my-1'><span><Link to="/internship">Internships</Link></span></li>
+                        <li className='my-1'><span><Link to="/about">About</Link></span></li>
                     </ul>
                 </div>
             </div>

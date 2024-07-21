@@ -89,7 +89,7 @@ const Navbar = () => {
                     theme="light"
                     transition={Bounce}
 /> */}
-                <nav className="navbar navbar-expand-lg bg-dark navbar-dark">
+                <nav className="navbar navbar-expand-lg fixed-top bg-dark navbar-dark">
                     <div className="container-fluid">
                         <img style={{ borderRadius: "120px" }} className='mx-2' src={jurisLogo} alt="Bootstrap" width="40" height="40" />
                         <a className="navbar-brand" href="/">Juris Spectra</a>
@@ -111,10 +111,10 @@ const Navbar = () => {
                                     <Link className="nav-link mx-1" to="/internship">Internships</Link>
                                 </li>
                                 <li className="nav-item">
-                                    <Link className="nav-link mx-1" to="/">Team Members</Link>
+                                    <Link className="nav-link mx-1" to="/teammembers">Team Members</Link>
                                 </li>
                                 <li className="nav-item">
-                                    <Link className="nav-link mx-1" to="/">Event</Link>
+                                    <Link className="nav-link mx-1" to="/event">Event</Link>
                                 </li>
                                 <li className="nav-item">
                                     <Link className="nav-link mx-1" to="/contact">Contact</Link>

@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import jurisLogo from '../assets/juris_spectra_logo.jpg'
+
 import { RxAvatar } from "react-icons/rx";
 import { CiClock2 } from "react-icons/ci";
 import { useNavigate } from 'react-router-dom';
@@ -161,10 +161,10 @@ const Home = () => {
             <div className='socialLogo'>
               <li className='list1stImg ml-1'>
                 {/* here to be updated the href value */}
-                <a href=""><img src={linkedin} alt="" /><span className='mx-2' style={{ fontSize: "1.2rem", color: "white" }}>Linkedin</span></a>
+                <a href="https://www.linkedin.com/company/juris-spectra/"><img src={linkedin} alt="" /><span className='mx-2' style={{ fontSize: "1.2rem", color: "white" }}>Linkedin</span></a>
               </li>
               <li className='list2ndImg mr-1'>
-                <a href=""><img src={instagram} alt="" /><span className='mx-2' style={{ fontSize: "1.2rem", color: "white" }}>Instagram</span></a>
+                <a href="https://www.instagram.com/jurisspectra?igsh=MTZwYWZ5ZGEzMnExMw=="><img src={instagram} alt="" /><span className='mx-2' style={{ fontSize: "1.2rem", color: "white" }}>Instagram</span></a>
               </li>
             </div>
 

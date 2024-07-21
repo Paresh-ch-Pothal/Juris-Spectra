@@ -1,8 +1,28 @@
+
 body {
+  cursor: none; /* Hide the default cursor */
   overflow-x: hidden;
 }
 
-/* //css for hoem page */
+.cursor-circle {
+  width: 20px;
+  height: 20px;
+  background-color: rgba(226, 180, 188, 0.34);
+  border-radius: 50%;
+  position: fixed; /* Use fixed positioning */
+  pointer-events: none; /* Make sure it doesn't block clicks */
+  transform: translate(-50%, -50%); /* Center the circle at the cursor */
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+  z-index: 1000; /* Make sure it's on top of other elements */
+}
+
+
+
+/* //css for home page */
+
+.margin-top{
+  margin-top: 2vh;
+}
 
 .homepage {
   height: 100%;
@@ -200,6 +220,18 @@ body {
   color: white;
 }
 
+.subscribe {
+  padding: 3px 6px;
+  background-color: #ff0000;
+  width: 50%;
+  border-radius: 20px;
+}
+
+.subscribe:hover {
+  background-color: white;
+  color: black;
+}
+
 .footer li {
   text-decoration: none;
   list-style: none;
@@ -337,6 +369,7 @@ body {
   padding: 10px 0;
   display: flex;
   align-items: center;
+  margin-top: 6.5vh;
 }
 
 .ticker {
@@ -354,16 +387,87 @@ body {
   0% {
     transform: translateX(100%);
   }
+
   100% {
     transform: translateX(-100%);
   }
+}
+
+/* team members */
+.members {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 150px;
+  height: 70vh;
+}
+
+.image {
+  display: flex;
+  gap: 50px;
+  width: 100%;
+  justify-content: space-around;
+}
+
+.photo {
+  border-radius: 50%;
+}
+
+/* event */
+.box-event {
+  margin: 50px 120px;
+  border: 2px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.image-event {
+  padding: 20px 30px;
+  height: max-content;
+}
+
+.text-event {
+  padding: 20px 30px;
+}
+
+/* .testimonial? */
+.test {
+  margin: 30px 120px;
+  padding: 50px 40px;
+  background-color: rgb(225, 225, 225);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 50px 30px;
+}
+
+.testimonial {
+  border: 2px solid rgb(127, 127, 127);
+  width: 40vw;
+  padding: 10px;
+}
+
+.duo {
+  margin: 0 20px;
+  display: flex;
+  gap: 30px;
 }
 
 
 
 
 @media only screen and (max-width: 900px) {
-  body{
+  .margin-top{
+    margin-top: 7vh;
+  }
+
+  .ticker-container{
+    margin-top: 8vh;
+  }
+  body {
     overflow-x: hidden;
   }
 
@@ -467,7 +571,7 @@ body {
     margin-bottom: 30px;
   }
 
-  .phase1{
+  .phase1 {
     width: 90%;
   }
 
@@ -475,11 +579,11 @@ body {
     margin: 0;
   }
 
-  .box{
+  .box {
     width: 97%;
   }
 
-  .founder{
+  .founder {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -497,5 +601,46 @@ body {
 
   .last {
     width: 100%;
+  }
+
+  .image {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    width: 90%;
+  }
+
+  .members {
+    margin: 0;
+    height: 100%;
+  }
+
+  .box-event {
+    flex-direction: column;
+    width: 100%;
+    margin: auto;
+  }
+
+  .duo {
+    flex-direction: column;
+  }
+
+  .testimonial {
+    width: 80vw;
+    height: fit-content;
+  }
+
+  .text-event{
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 1300px) {
+  .test {
+    margin: 30px;
+  }
+
+  .outer {
+    margin: 0 50px;
   }
 }
