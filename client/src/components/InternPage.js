@@ -4,7 +4,7 @@ import { useLocation, useParams } from 'react-router-dom';
 const InternPage = () => {
     const { id } = useParams();
     const [info, setInfo] = useState({});
-    const host = "http://localhost:5000";
+    // const host = "http://localhost:5000";
 
     const fetchintern = async () => {
         const response = await fetch(`https://juris-spectra.vercel.app/api/fetchinternid/${id}`, {
@@ -17,6 +17,7 @@ const InternPage = () => {
 
 
     useEffect(() => {
+        // eslint-disable-next-line
         fetchintern();
     }, [id]);
 
@@ -41,9 +42,9 @@ const InternPage = () => {
                         <div className='table'>
                             {intern.table && <div dangerouslySetInnerHTML={{ __html: intern.table }} />}
                         </div>
-                        { intern.link && <div>
+                        {intern.link && <div>
                             <a href={intern.link} target="_blank" rel="noopener noreferrer"><button className="btn btn-outline-success my-4" type="button">Click Here</button></a>
-                        </div> }
+                        </div>}
                     </div>
                 ))}
             </div>

@@ -3,12 +3,12 @@ import jurisLogo from '../assets/juris_spectra_logo.jpg'
 import { RxAvatar } from "react-icons/rx";
 import { CiClock2 } from "react-icons/ci";
 import { useNavigate } from 'react-router-dom';
-import instagram from '../assets/instagram.gif'
-import linkedin from '../assets/linkedin.gif'
+import instagram from '../assets/instagram.webp'
+import linkedin from '../assets/linkedin.webp'
 
 const Home = () => {
 
-  const host = "http://localhost:5000";
+  // const host = "http://localhost:5000";
   const [largeNews, setlargeNews] = useState([])
   const [smallNews, setsmallNews] = useState([])
   const [count, setcount] = useState(5);
@@ -58,6 +58,7 @@ const Home = () => {
 
 
   useEffect(() => {
+    // eslint-disable-next-line
     getlargenews();
     getsmallnews();
   }, [count])
@@ -78,7 +79,7 @@ const Home = () => {
   }
 
   return (
-    <div style={{overflowX: "hidden"}}>
+    <div style={{ overflowX: "hidden" }}>
       <div className="homepage">
         <div className="right mt-4">
           {loading ? (
@@ -149,18 +150,18 @@ const Home = () => {
           </div>
 
           <div className="follow">
-            <div className='box'>Follow Us</div>
-              <div className="linebox" style={{height: "3px",background: "black"}}></div>
-              <div className='socialLogo'>
-                <li className='list1stImg ml-1'>
-                  {/* here to be updated the href value */}
-                  <a href=""><img src={linkedin} alt="" /><span className='mx-2' style={{fontSize: "1.2rem",color: "white"}}>Linkedin</span></a>  
-                </li>
-                <li className='list2ndImg mr-1'>
-                  <a href=""><img src={instagram} alt="" /><span className='mx-2' style={{fontSize: "1.2rem",color: "white"}}>Instagram</span></a>
-                </li>
-              </div>
-            
+            <div className='boxfollow'>Follow Us</div>
+            <div className="linebox" style={{ height: "3px", background: "black" }}></div>
+            <div className='socialLogo'>
+              <li className='list1stImg ml-1'>
+                {/* here to be updated the href value */}
+                <a href=""><img src={linkedin} alt="" /><span className='mx-2' style={{ fontSize: "1.2rem", color: "white" }}>Linkedin</span></a>
+              </li>
+              <li className='list2ndImg mr-1'>
+                <a href=""><img src={instagram} alt="" /><span className='mx-2' style={{ fontSize: "1.2rem", color: "white" }}>Instagram</span></a>
+              </li>
+            </div>
+
           </div>
 
 

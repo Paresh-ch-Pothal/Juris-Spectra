@@ -4,7 +4,7 @@ import { useParams } from 'react-router-dom';
 const VisitPageLarge = () => {
     const { id } = useParams();
     const [info, setInfo] = useState({});
-    const host = "http://localhost:5000";
+    // const host = "http://localhost:5000";
 
     const fetchLargeNews = async () => {
         const response = await fetch(`https://juris-spectra.vercel.app/api/fetchnewslargeid/${id}`, {
@@ -17,6 +17,7 @@ const VisitPageLarge = () => {
 
     useEffect(() => {
         fetchLargeNews();
+        // eslint-disable-next-line
     }, [id]);
 
     return (

@@ -8,7 +8,7 @@ import 'react-toastify/dist/ReactToastify.css';
 
 const SearchPage = () => {
 
-    const host = "http://localhost:5000";
+    // const host = "http://localhost:5000";
     const [data, setdata] = useState(['initially'])
     let history = useNavigate();
     // console.log(data.length)
@@ -83,6 +83,7 @@ const SearchPage = () => {
         if (searchQuery) {
             searchData(searchQuery)
         }
+        // eslint-disable-next-line
     }, [searchQuery])
 
 

@@ -10,7 +10,7 @@ const Contact = () => {
         message: ""
     })
 
-    const host = "http://localhost:5000";
+    // const host = "http://localhost:5000";
 
     const handleSubmit = async (e) => {
         e.preventDefault();

@@ -9,7 +9,7 @@ import SearchPageIntern from './SearchPageIntern';
 
 const Internship = () => {
 
-    const host = "http://localhost:5000";
+    // const host = "http://localhost:5000";
     const [intern, setintern] = useState([])
     const [count, setcount] = useState(5);
     const [loading, setloading] = useState(false)
@@ -49,6 +49,7 @@ const Internship = () => {
 
     useEffect(() => {
         getintern()
+        // eslint-disable-next-line
     }, [count])
 
     let history = useNavigate();

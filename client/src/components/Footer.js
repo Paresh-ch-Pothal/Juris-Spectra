@@ -1,6 +1,6 @@
 import React from 'react'
-import instagram from '../assets/instagram.gif'
-import linkedin from '../assets/linkedin.gif'
+import instagram from '../assets/instagram.webp'
+import linkedin from '../assets/linkedin.webp'
 
 
 const Footer = () => {

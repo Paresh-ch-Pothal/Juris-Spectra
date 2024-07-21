@@ -4,7 +4,7 @@ import { useParams } from 'react-router-dom';
 const VisitPageSmall = () => {
     const { id } = useParams();
     const [info, setInfo] = useState({});
-    const host = "http://localhost:5000";
+    // const host = "http://localhost:5000";
 
     const fetchSmallNews = async () => {
         const response = await fetch(`https://juris-spectra.vercel.app/api/fetchnewssmallid/${id}`, {
@@ -17,6 +17,7 @@ const VisitPageSmall = () => {
 
     useEffect(() => {
         fetchSmallNews();
+        // eslint-disable-next-line
     }, [id]);
 
     return (

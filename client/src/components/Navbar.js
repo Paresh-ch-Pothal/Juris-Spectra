@@ -2,12 +2,12 @@ import React, { useEffect, useState } from 'react'
 import jurisLogo from '../assets/juris_spectra_logo.jpg'
 import { Link, useLocation, useNavigate } from 'react-router-dom'
 import SearchPageNews from './SearchPageNews';
-import { ToastContainer, toast ,Bounce} from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
+// import { ToastContainer, toast ,Bounce} from 'react-toastify';
+// import 'react-toastify/dist/ReactToastify.css';
 
 const Navbar = () => {
 
-    const host = "http://localhost:5000";
+    // const host = "http://localhost:5000";
 
     const [search, setsearch] = useState('')
     let history = useNavigate();
@@ -19,7 +19,7 @@ const Navbar = () => {
     }
 
     const handleOnchange = (e) => {
-        if (e.target.name == "search") {
+        if (e.target.name === "search") {
             setsearch(e.target.value)
         }
     }
