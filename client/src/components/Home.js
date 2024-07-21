@@ -83,7 +83,7 @@ const Home = () => {
 
   return (
     <div style={{ overflowX: "hidden" }}>
-      
+
       <div className="homepage">
         <div className="right mt-4">
           {loading ? (
@@ -98,22 +98,24 @@ const Home = () => {
                 if (index < count)
                   return (
                     <>
-                      <div className='homecard my-2' key={news._id}>
-                        <img onClick={() => { handlelargeNews(news._id) }} style={{ cursor: "pointer" }} src={news.newsimg ? news.newsimg : "https://www.livelaw.in/cms/wp-content/uploads/2013/11/Law-School-Internship.jpg"} alt="" />
-                        <div className='homecardtext'>
-                          <h3 onClick={() => { handlelargeNews(news._id) }} style={{ cursor: "pointer" }} className='mx-2'>{news.title}</h3>
-                          <div className='author'>
-                            <div className='avatar'>
-                              <RxAvatar className='mx-1 avatarimg' /><span>{news.author}</span>
+                      <div key={news._id}>
+                        <div className='homecard my-2'>
+                          <img onClick={() => { handlelargeNews(news._id) }} style={{ cursor: "pointer" }} src={news.newsimg ? news.newsimg : "https://www.livelaw.in/cms/wp-content/uploads/2013/11/Law-School-Internship.jpg"} alt="" />
+                          <div className='homecardtext'>
+                            <h3 onClick={() => { handlelargeNews(news._id) }} style={{ cursor: "pointer" }} className='mx-2'>{news.title}</h3>
+                            <div className='author'>
+                              <div className='avatar'>
+                                <RxAvatar className='mx-1 avatarimg' /><span>{news.author}</span>
+                              </div>
+                              <div className='date'>
+                                <CiClock2 className='avatarimg' /> <span>{formatDate(news.createdAt)}</span>
+                              </div>
                             </div>
-                            <div className='date'>
-                              <CiClock2 className='avatarimg' /> <span>{formatDate(news.createdAt)}</span>
-                            </div>
+                            <p className="mx-2 para">{news.homedesc}</p>
                           </div>
-                          <p className="mx-2 para">{news.homedesc}</p>
                         </div>
+                        <div className='line'></div>
                       </div>
-                      <div className='line'></div>
                     </>
                   )
               }
