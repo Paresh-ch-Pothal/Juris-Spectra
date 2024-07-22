@@ -548,17 +548,19 @@ body {
   .footer li {
     margin: 0px;
     padding: 0px;
-    margin: auto;
     display: flex;
     justify-content: center;
-    align-items: center;
     flex-direction: column;
     gap: 6px;
   }
 
+  .footer ul{
+    padding: 0px;
+  }
+
   .footer1 {
-    width: 100%;
-    margin: 30px 0px;
+    width: 100vw;
+    margin: auto;
   }
 
   .footer2 {
