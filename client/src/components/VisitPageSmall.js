@@ -20,6 +20,7 @@ const VisitPageSmall = () => {
         // eslint-disable-next-line
     }, [id]);
 
+
     return (
         <div>
             <div className='visitpage'>

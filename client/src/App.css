@@ -472,11 +472,7 @@ body {
 
 @media only screen and (max-width: 900px) {
   .margin-top {
-    margin-top: 7vh;
-  }
-
-  .ticker-container {
-    margin-top: 8vh;
+    margin-top: 6vh;
   }
 
   body {
