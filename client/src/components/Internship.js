@@ -178,9 +178,11 @@ const Internship = () => {
                 )
 
             }
+
+            {intern.length > 5 &&
             <div className='rightbutton'>
                 <button disabled={count >= intern.length ? true : false} onClick={handleLoadMore} className="btn btn-outline-success my-4" type="button">Read More</button>
-            </div>
+            </div> }
 
             {location.pathname === '/searchpageintern' && <SearchPageIntern data={data} />}
         </div >

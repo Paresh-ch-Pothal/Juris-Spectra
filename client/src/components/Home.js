@@ -127,10 +127,10 @@ const Home = () => {
             })
           )
           }
-
+          {largeNews.length > 5 && 
           <div className='rightbutton'>
             <button disabled={count >= largeNews.length ? true : false} onClick={handleLoadMore} className="btn btn-outline-success my-4" type="button">Read More</button>
-          </div>
+          </div> }
 
 
         </div>
@@ -156,9 +156,10 @@ const Home = () => {
             }
           })}
 
+          {smallNews.length > 5 &&
           <div className='rightbutton'>
-            <button disabled={cousmall >= largeNews.length ? true : false} onClick={handleLoadMoreSmall} className="btn btn-outline-success my-4" type="button">Read More</button>
-          </div>
+            <button disabled={cousmall >= smallNews.length ? true : false} onClick={handleLoadMoreSmall} className="btn btn-outline-success my-4" type="button">Read More</button>
+          </div> }
 
           <div className="follow">
             <div className='boxfollow'>Follow Us</div>
