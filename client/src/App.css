@@ -1,6 +1,6 @@
-
 body {
-  cursor: none; /* Hide the default cursor */
+  cursor: none;
+  /* Hide the default cursor */
   overflow-x: hidden;
 }
 
@@ -9,18 +9,22 @@ body {
   height: 20px;
   background-color: rgba(226, 180, 188, 0.34);
   border-radius: 50%;
-  position: fixed; /* Use fixed positioning */
-  pointer-events: none; /* Make sure it doesn't block clicks */
-  transform: translate(-50%, -50%); /* Center the circle at the cursor */
+  position: fixed;
+  /* Use fixed positioning */
+  pointer-events: none;
+  /* Make sure it doesn't block clicks */
+  transform: translate(-50%, -50%);
+  /* Center the circle at the cursor */
   transition: background-color 0.3s ease, border-color 0.3s ease;
-  z-index: 1000; /* Make sure it's on top of other elements */
+  z-index: 1000;
+  /* Make sure it's on top of other elements */
 }
 
 
 
 /* //css for home page */
 
-.margin-top{
+.margin-top {
   margin-top: 2vh;
 }
 
@@ -403,6 +407,7 @@ body {
   height: 70vh;
 }
 
+
 .image {
   display: flex;
   gap: 50px;
@@ -412,6 +417,12 @@ body {
 
 .photo {
   border-radius: 50%;
+}
+
+.team {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 /* event */
@@ -460,13 +471,14 @@ body {
 
 
 @media only screen and (max-width: 900px) {
-  .margin-top{
+  .margin-top {
     margin-top: 7vh;
   }
 
-  .ticker-container{
+  .ticker-container {
     margin-top: 8vh;
   }
+
   body {
     overflow-x: hidden;
   }
@@ -611,8 +623,9 @@ body {
   }
 
   .members {
-    margin: 0;
+    margin: auto;
     height: 100%;
+    width: 100%;
   }
 
   .box-event {
@@ -630,8 +643,15 @@ body {
     height: fit-content;
   }
 
-  .text-event{
+  .text-event {
     width: 100%;
+  }
+
+  .flex-col {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
   }
 }
 
