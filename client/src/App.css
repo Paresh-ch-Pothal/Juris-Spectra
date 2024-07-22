@@ -212,7 +212,7 @@ body {
 .footer {
   overflow-x: hidden;
   background-color: rgba(14, 13, 13, 0.953);
-  height: 25vh;
+  height: 27vh;
   width: 100vw;
   display: flex;
   justify-content: space-around;
@@ -528,7 +528,7 @@ body {
   }
 
   .footer {
-    height: 55vh;
+    height: 65vh;
     flex-wrap: wrap;
     width: 100vw;
   }
