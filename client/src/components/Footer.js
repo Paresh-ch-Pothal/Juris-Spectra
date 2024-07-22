@@ -27,18 +27,18 @@ const Footer = () => {
                 </div>
                 <div>
                     <ul>
-                        <li><span><Link to="/">Home</Link></span></li>
-                        <li className='my-1'><span><Link to="/about">About</Link></span></li>
-                        <li className='my-1'><span><Link to="/contact">Contact</Link></span></li>
-                        <li className='my-1'><span><Link to="/teammembers">Team</Link></span></li>
+                        <li><span><Link style={{listStyle: "none",textDecoration: "none",color: "white"}} to="/">Home</Link></span></li>
+                        <li className='my-1'><span><Link style={{listStyle: "none",textDecoration: "none",color: "white"}} to="/about">About</Link></span></li>
+                        <li className='my-1'><span><Link style={{listStyle: "none",textDecoration: "none",color: "white"}} to="/contact">Contact</Link></span></li>
+                        <li className='my-1'><span><Link style={{listStyle: "none",textDecoration: "none",color: "white"}} to="/teammembers">Team</Link></span></li>
                     </ul>
                 </div>
                 <div>
                     <ul>
-                        <li><span><Link to="/privacypolicy">Privacy</Link></span></li>
-                        <li className='my-1'><span><Link to="/event">Event</Link></span></li>
-                        <li className='my-1'><span><Link to="/internship">Internships</Link></span></li>
-                        <li className='my-1'><span><Link to="/about">About</Link></span></li>
+                        <li><span><Link style={{listStyle: "none",textDecoration: "none",color: "white"}} to="/privacypolicy">Privacy</Link></span></li>
+                        <li className='my-1'><span><Link style={{listStyle: "none",textDecoration: "none",color: "white"}} to="/event">Event</Link></span></li>
+                        <li className='my-1'><span><Link style={{listStyle: "none",textDecoration: "none",color: "white"}} to="/internship">Internships</Link></span></li>
+                        <li className='my-1'><span><Link style={{listStyle: "none",textDecoration: "none",color: "white"}} to="/about">About</Link></span></li>
                     </ul>
                 </div>
             </div>
