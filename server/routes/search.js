@@ -15,7 +15,7 @@ router.get("/searchdatanews", async (req, res) => {
                 { title: { $regex: search, $options: "i" } },
                 { homedesc: { $regex: search, $options: "i" } }
             ]
-        });
+        }).sort({createdAt: -1});
         if(result.length !== 0){
             return res.status(200).json({ success: true, message: "Successfully fetch", result })
         }

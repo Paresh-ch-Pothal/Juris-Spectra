@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import jurisLogo from '../assets/juris_spectra_logo.jpg'
 import { Link, useLocation, useNavigate } from 'react-router-dom'
 import SearchPageNews from './SearchPageNews';
+import NewsTicker from './NewsTicker';
 // import { ToastContainer, toast ,Bounce} from 'react-toastify';
 // import 'react-toastify/dist/ReactToastify.css';
 
@@ -73,6 +74,14 @@ const Navbar = () => {
     //     }
     // }, [searchQuery])
 
+    const headlines = [
+        'Breaking News: Market hits an all-time high!',
+        'Sports Update: Local team wins championship!',
+        'Weather Alert: Heavy rain expected tomorrow!',
+        'Weather Alert: Heavy rain expected tomorrow!',
+        // Add more headlines as needed
+      ];
+
     return (
         <>
             <div>
@@ -129,7 +138,7 @@ const Navbar = () => {
                 </nav>
             </div>
 
-            {location.pathname === '/searchpagenews' && <SearchPageNews />}
+            <NewsTicker headlines={headlines}/>
         </>
 
 

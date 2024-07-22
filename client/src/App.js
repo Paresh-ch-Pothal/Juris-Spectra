@@ -37,13 +37,6 @@ function App() {
     };
   }, []);
 
-  const headlines = [
-    'Breaking News: Market hits an all-time high!',
-    'Sports Update: Local team wins championship!',
-    'Weather Alert: Heavy rain expected tomorrow!',
-    'Weather Alert: Heavy rain expected tomorrow!',
-    // Add more headlines as needed
-  ];
   return (
     <>
       <div className='cursor-circle'
@@ -51,7 +44,6 @@ function App() {
       </div>
       <Router>
         <Navbar />
-        <NewsTicker headlines={headlines} />
         <div className='margin-top'>
           <Routes>
             <Route exact path="/" element={<Home />} />
@@ -64,7 +56,7 @@ function App() {
             <Route exact path="/internpage/:id" element={<InternPage />} />
             <Route exact path="/privacypolicy" element={<PrivacyPolicy />} />
             <Route exact path="/contact" element={<Contact />} />
-            <Route exact path="/newsticker" element={<NewsTicker />} />
+            <Route exact path="/newsticker" element={<NewsTicker/>} />
             <Route exact path="/addlargenews" element={<AddLargeNews />} />
             <Route exact path="/addsmallnews" element={<AddSmallNews />} />
             <Route exact path="/addintern" element={<AddIntern />} />

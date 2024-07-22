@@ -13,6 +13,7 @@ const Home = () => {
   const [largeNews, setlargeNews] = useState([])
   const [smallNews, setsmallNews] = useState([])
   const [count, setcount] = useState(5);
+  const [cousmall,setcousmall]=useState(5)
   const [loading, setloading] = useState(false)
 
 
@@ -62,7 +63,7 @@ const Home = () => {
     // eslint-disable-next-line
     getlargenews();
     getsmallnews();
-  }, [count])
+  }, [count,cousmall])
 
   let history = useNavigate();
 
@@ -77,6 +78,10 @@ const Home = () => {
 
   const handleLoadMore = () => {
     setcount((prevCount) => prevCount + 5);
+  }
+
+  const handleLoadMoreSmall = ()=>{
+    setcousmall((prevCount) => prevCount + 5);
   }
 
 
@@ -132,7 +137,7 @@ const Home = () => {
         <div className="left mt-4">
           {smallNews.map((news, index) => {
             {
-              if (index < count)
+              if (index < cousmall)
                 return (
 
 
@@ -152,7 +157,7 @@ const Home = () => {
           })}
 
           <div className='rightbutton'>
-            <button disabled={count >= largeNews.length ? true : false} onClick={handleLoadMore} className="btn btn-outline-success my-4" type="button">Read More</button>
+            <button disabled={cousmall >= largeNews.length ? true : false} onClick={handleLoadMoreSmall} className="btn btn-outline-success my-4" type="button">Read More</button>
           </div>
 
           <div className="follow">
