@@ -144,7 +144,7 @@ const Home = () => {
                   <div className='homecard my-2' key={news._id}>
                     <img className='leftimg' style={{ cursor: "pointer" }} onClick={() => { handlesmallNews(news._id) }} src={news.newsimg ? news.newsimg : "https://www.livelaw.in/cms/wp-content/uploads/2013/11/Law-School-Internship.jpg"} alt="" />
                     <div className='homecardtext'>
-                      <h5 style={{ cursor: "pointer" }} onClick={() => { handlesmallNews(news._id) }} className='mx-2'>{news.title}</h5>
+                      <h6 style={{ cursor: "pointer" }} onClick={() => { handlesmallNews(news._id) }} className='mx-2'>{news.title}</h6>
                       <div className='author'>
                         <div className='date mx-2'>
                           <CiClock2 className='avatarimgleft' /> <span>{formatDate(news.createdAt)}</span>

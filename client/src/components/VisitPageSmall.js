@@ -23,25 +23,25 @@ const VisitPageSmall = () => {
     return (
         <div>
             <div className='visitpage'>
-                <h1 style={{ textAlign: "center" }}>{info.title}</h1>
-                <div className='visitpageimg'>
+                <h1 style={{ textAlign: "center" }} className='my-2'>{info.title}</h1>
+                <div className='visitpageimg my-2'>
                     <img src={info.newsimg} alt="" />
                 </div>
                 {Array.isArray(info.desc) && info.desc.map((news, index) => (
                     <div className='phase1' key={index}>
-                        <div className='head'>
-                            {news.h1 && <h3 style={{ textAlign: "center" }}>{news.h1}</h3>}
+                        <div className='head my-2'>
+                            {news.h1 && <h3 style={{ textAlign: "center" }} className='my-2'>{news.h1}</h3>}
                         </div>
                         <div className='subhead'>
-                            {news.sub1 && <h5 style={{ textAlign: "center" }}>{news.sub1}</h5>}
+                            {news.sub1 && <h5 style={{ textAlign: "center" }} className='my-2'>{news.sub1}</h5>}
                         </div>
                         <div className='visitpara'>
-                            {news.desc && <p>{news.desc}</p>}
+                            {news.desc && <p className='my-2'>{news.desc}</p>}
                         </div>
                         <div className='table'>
-                            {news.table && <div dangerouslySetInnerHTML={{ __html: news.table }} />}
+                            {news.table && <div dangerouslySetInnerHTML={{ __html: news.table }} className='my-2' />}
                         </div>
-                        {news.link && <div>
+                        {news.link && <div className='my-2'>
                             <a href={news.link} target="_blank" rel="noopener noreferrer"><button className="btn btn-outline-success my-4" type="button">Click Here</button></a>
                         </div>}
                     </div>
