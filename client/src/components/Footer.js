@@ -19,13 +19,13 @@ const Footer = () => {
                     <button onClick={handleSubscribe} className="my-4 subscribe text-center" type="button">Subscribe</button>
                 </div>
 
-                <div>
+                <div className='footer1'>
                     <ul>
                         <li><a href="https://www.linkedin.com/company/juris-spectra/" style={{listStyle: "none",textDecoration: "none",color: "white"}}><img  src={linkedin} className='mx-2' alt="html" width="40" height="40" style={{ borderRadius: "20px", cursor: "pointer" }} /><span>LinkedIn</span></a></li>
                         <li className='my-3'><a href="https://www.instagram.com/jurisspectra?igsh=MTZwYWZ5ZGEzMnExMw==" style={{listStyle: "none",textDecoration: "none",color: "white"}}><img src={instagram} className='mx-2' alt="html" width="40" height="40" style={{ borderRadius: "20px", cursor: "pointer" }} /><span>Instagram</span></a></li>
                     </ul>
                 </div>
-                <div>
+                <div className='footer1'>
                     <ul>
                         <li><span><Link style={{listStyle: "none",textDecoration: "none",color: "white"}} to="/">Home</Link></span></li>
                         <li className='my-1'><span><Link style={{listStyle: "none",textDecoration: "none",color: "white"}} to="/about">About</Link></span></li>
@@ -33,7 +33,7 @@ const Footer = () => {
                         <li className='my-1'><span><Link style={{listStyle: "none",textDecoration: "none",color: "white"}} to="/teammembers">Team</Link></span></li>
                     </ul>
                 </div>
-                <div>
+                <div className='footer1'>
                     <ul>
                         <li><span><Link style={{listStyle: "none",textDecoration: "none",color: "white"}} to="/privacypolicy">Privacy</Link></span></li>
                         <li className='my-1'><span><Link style={{listStyle: "none",textDecoration: "none",color: "white"}} to="/event">Event</Link></span></li>
