@@ -9,6 +9,7 @@ const SearchPage = () => {
 
     // const host = "http://localhost:5000";
     const [data, setdata] = useState([])
+    const [loading, setloading] = useState(false)
     let history = useNavigate();
 
     const handleintern = (id) => {
@@ -38,6 +39,7 @@ const SearchPage = () => {
     // console.log(searchQuery)
 
     const searchData = async (query) => {
+        setloading(true)
         const response = await fetch(`https://juris-spectra.vercel.app/api/searchdataintern?search=${encodeURIComponent(query)}`, {
             method: "GET",
         });
@@ -56,6 +58,7 @@ const SearchPage = () => {
                 transition: Bounce,
             });
             setdata(json.result || [])
+            setloading(false)
         }
         else {
             toast.error('No Such results Found', {
@@ -97,13 +100,31 @@ const SearchPage = () => {
                 theme="light"
                 transition={Bounce}
             /> */}
-            {data.length > 0 ? data.map((intern) => {
-                return (
-                    <>
-                        <div className='homecardsearch my-2' key={intern._id}>
-                            <img onClick={() => { handleintern(intern._id) }} style={{ cursor: "pointer" }} src={intern.internimg ? intern.internimg : "https://www.livelaw.in/cms/wp-content/uploads/2013/11/Law-School-Internship.jpg"} alt="" />
+
+{loading ? (
+                <div className="text-center">
+                    <div className="spinner-border" role="status">
+                        <span className="visually-hidden">Loading...</span>
+                    </div>
+                </div>
+            ) : (
+                data.length > 0 ? data.map((intern) => (
+                    <div key={intern._id}>
+                        <div className='homecardsearch my-2'>
+                            <img
+                                onClick={() => { handleintern(intern._id) }}
+                                style={{ cursor: "pointer" }}
+                                src={intern.internimg ? intern.internimg : "https://www.livelaw.in/cms/wp-content/uploads/2013/11/Law-School-Internship.jpg"}
+                                alt=""
+                            />
                             <div className='homecardtextsearch'>
-                                <h3 onClick={() => { handleintern(intern._id) }} style={{ cursor: "pointer" }} className='mx-2'>{intern.title ? intern.title : "No Result"}</h3>
+                                <h3
+                                    onClick={() => { handleintern(intern._id) }}
+                                    style={{ cursor: "pointer" }}
+                                    className='mx-2'
+                                >
+                                    {intern.title ? intern.title : "No Result"}
+                                </h3>
                                 <div className='author'>
                                     <div className='avatar'>
                                         <RxAvatar className='mx-1 avatarimg' /><span>{intern.author}</span>
@@ -116,12 +137,13 @@ const SearchPage = () => {
                             </div>
                         </div>
                         <div className='line'></div>
-                    </>
+                    </div>
+                )) : (
+                    <h1 style={{ textAlign: "center" }}>No Result Found</h1>
                 )
-            })
-                : <h1 style={{ textAlign: "center" }}>No Result Found</h1>}
+            )}
         </>
-    )
+    );
 }
 
 export default SearchPage

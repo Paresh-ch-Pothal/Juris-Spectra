@@ -13,7 +13,7 @@ const Home = () => {
   const [largeNews, setlargeNews] = useState([])
   const [smallNews, setsmallNews] = useState([])
   const [count, setcount] = useState(5);
-  const [cousmall,setcousmall]=useState(5)
+  const [cousmall, setcousmall] = useState(5)
   const [loading, setloading] = useState(false)
 
 
@@ -63,7 +63,7 @@ const Home = () => {
     // eslint-disable-next-line
     getlargenews();
     getsmallnews();
-  }, [count,cousmall])
+  }, [count, cousmall])
 
   let history = useNavigate();
 
@@ -80,7 +80,7 @@ const Home = () => {
     setcount((prevCount) => prevCount + 5);
   }
 
-  const handleLoadMoreSmall = ()=>{
+  const handleLoadMoreSmall = () => {
     setcousmall((prevCount) => prevCount + 5);
   }
 
@@ -127,39 +127,47 @@ const Home = () => {
             })
           )
           }
-          {largeNews.length > 5 && 
-          <div className='rightbutton'>
-            <button disabled={count >= largeNews.length ? true : false} onClick={handleLoadMore} className="btn btn-outline-success my-4" type="button">Read More</button>
-          </div> }
+          {largeNews.length > 5 &&
+            <div className='rightbutton'>
+              <button disabled={count >= largeNews.length ? true : false} onClick={handleLoadMore} className="btn btn-outline-success my-4" type="button">Read More</button>
+            </div>}
 
 
         </div>
+
         <div className="left mt-4">
-          {smallNews.map((news, index) => {
-            {
-              if (index < cousmall)
-                return (
+          {loading ? (
+            <div className="text-center">
+              <div className="spinner-border" role="status">
+                <span className="visually-hidden">Loading...</span>
+              </div>
+            </div>) : (
+            smallNews.map((news, index) => {
+              {
+                if (index < cousmall)
+                  return (
 
 
-                  <div className='homecard my-2' key={news._id}>
-                    <img className='leftimg' style={{ cursor: "pointer" }} onClick={() => { handlesmallNews(news._id) }} src={news.newsimg ? news.newsimg : "https://www.livelaw.in/cms/wp-content/uploads/2013/11/Law-School-Internship.jpg"} alt="" />
-                    <div className='homecardtext'>
-                      <h6 style={{ cursor: "pointer" }} onClick={() => { handlesmallNews(news._id) }} className='mx-2'>{news.title}</h6>
-                      <div className='author'>
-                        <div className='date mx-2'>
-                          <CiClock2 className='avatarimgleft' /> <span>{formatDate(news.createdAt)}</span>
+                    <div className='homecard my-2' key={news._id}>
+                      <img className='leftimg' style={{ cursor: "pointer" }} onClick={() => { handlesmallNews(news._id) }} src={news.newsimg ? news.newsimg : "https://www.livelaw.in/cms/wp-content/uploads/2013/11/Law-School-Internship.jpg"} alt="" />
+                      <div className='homecardtext'>
+                        <h6 style={{ cursor: "pointer" }} onClick={() => { handlesmallNews(news._id) }} className='mx-2'>{news.title}</h6>
+                        <div className='author'>
+                          <div className='date mx-2'>
+                            <CiClock2 className='avatarimgleft' /> <span>{formatDate(news.createdAt)}</span>
+                          </div>
                         </div>
                       </div>
                     </div>
-                  </div>
-                )
-            }
-          })}
+                  )
+              }
+            }))
+          }
 
           {smallNews.length > 5 &&
-          <div className='rightbutton'>
-            <button disabled={cousmall >= smallNews.length ? true : false} onClick={handleLoadMoreSmall} className="btn btn-outline-success my-4" type="button">Read More</button>
-          </div> }
+            <div className='rightbutton'>
+              <button disabled={cousmall >= smallNews.length ? true : false} onClick={handleLoadMoreSmall} className="btn btn-outline-success my-4" type="button">Read More</button>
+            </div>}
 
           <div className="follow">
             <div className='boxfollow'>Follow Us</div>

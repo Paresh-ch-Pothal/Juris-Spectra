@@ -4,15 +4,18 @@ import { useParams } from 'react-router-dom';
 const VisitPageLarge = () => {
     const { id } = useParams();
     const [info, setInfo] = useState({});
+    const [loading,setloading]=useState(false)
     // const host = "http://localhost:5000";
 
     const fetchLargeNews = async () => {
+        setloading(true)
         const response = await fetch(`https://juris-spectra.vercel.app/api/fetchnewslargeid/${id}`, {
             method: "GET",
         });
         const data = await response.json();
 
         setInfo(data.newslarge || {});
+        setloading(false)
     }
 
     useEffect(() => {
@@ -22,6 +25,12 @@ const VisitPageLarge = () => {
 
     return (
         <div>
+            {loading ? (
+                <div className="text-center">
+                    <div className="spinner-border" role="status">
+                        <span className="visually-hidden">Loading...</span>
+                    </div>
+                </div>) : (
             <div className='visitpage'>
                 <h1 style={{ textAlign: "center" }} className='my-2'>{info.title}</h1>
                 <div className='visitpageimg my-2'>
@@ -47,6 +56,7 @@ const VisitPageLarge = () => {
                     </div>
                 ))}
             </div>
+                )}
         </div>
     )
 }

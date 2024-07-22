@@ -130,6 +130,7 @@ import 'react-toastify/dist/ReactToastify.css';
 
 const SearchPage = () => {
     const [data, setData] = useState([]);
+    const [loading, setloading] = useState(false)
     let history = useNavigate();
 
     const handleLargeNews = (id) => {
@@ -153,6 +154,7 @@ const SearchPage = () => {
     const searchQuery = queryParams.get("search");
 
     const searchData = async (query) => {
+        setloading(true)
         const response = await fetch(`https://juris-spectra.vercel.app/api/searchdatanews?search=${encodeURIComponent(query)}`, {
             method: "GET",
         });
@@ -171,6 +173,7 @@ const SearchPage = () => {
             //     transition: Bounce,
             // });
             setData(json.result || [])
+            setloading(false)
         } else {
             // toast.error('No Such results Found', {
             //     position: "top-left",
@@ -197,27 +200,35 @@ const SearchPage = () => {
 
     return (
         <>
-            <ToastContainer />
-            {data.length > 0 ? data.map((news) => {
-                return (
-                    <div className='homecardsearch my-2' key={news._id}>
-                        <img onClick={() => handleLargeNews(news._id)} style={{ cursor: "pointer" }} src={news.newsimg ? news.newsimg : "https://www.livelaw.in/cms/wp-content/uploads/2013/11/Law-School-Internship.jpg"} alt="" />
-                        <div className='homecardtextsearch'>
-                            <h3 onClick={() => handleLargeNews(news._id)} style={{ cursor: "pointer" }} className='mx-2'>{news.title ? news.title : "No Result"}</h3>
-                            <div className='author'>
-                                <div className='avatar'>
-                                    <RxAvatar className='mx-1 avatarimg' /><span>{news.author}</span>
-                                </div>
-                                <div className='date'>
-                                    <CiClock2 className='avatarimg' /> <span>{formatDate(news.createdAt)}</span>
-                                </div>
-                            </div>
-                            <p className="mx-2 para">{news.homedesc}</p>
-                        </div>
+            {loading ? (
+                <div className="text-center">
+                    <div className="spinner-border" role="status">
+                        <span className="visually-hidden">Loading...</span>
                     </div>
-                )
-            })
-                : <h1 style={{ textAlign: "center" }}>No Result Found</h1>}
+                </div>
+            ) : (
+                data.length > 0 ? data.map((news) => {
+                    return (
+                        <div className='homecardsearch my-2' key={news._id}>
+                            <img onClick={() => handleLargeNews(news._id)} style={{ cursor: "pointer" }} src={news.newsimg ? news.newsimg : "https://www.livelaw.in/cms/wp-content/uploads/2013/11/Law-School-Internship.jpg"} alt="" />
+                            <div className='homecardtextsearch'>
+                                <h3 onClick={() => handleLargeNews(news._id)} style={{ cursor: "pointer" }} className='mx-2'>{news.title ? news.title : "No Result"}</h3>
+                                <div className='author'>
+                                    <div className='avatar'>
+                                        <RxAvatar className='mx-1 avatarimg' /><span>{news.author}</span>
+                                    </div>
+                                    <div className='date'>
+                                        <CiClock2 className='avatarimg' /> <span>{formatDate(news.createdAt)}</span>
+                                    </div>
+                                </div>
+                                <p className="mx-2 para">{news.homedesc}</p>
+                            </div>
+                        </div>
+                    )
+                })
+                    : (<h1 style={{ textAlign: "center" }}>No Result Found</h1>
+                    ))}
+
         </>
     )
 }
