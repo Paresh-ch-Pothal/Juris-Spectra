@@ -75,6 +75,7 @@ const SearchPage = () => {
                 theme: "light",
                 transition: Bounce,
             });
+            setloading(false)
             setdata([])
         }
         // console.log(json.result);

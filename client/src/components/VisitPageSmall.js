@@ -16,10 +16,9 @@ const VisitPageSmall = () => {
             method: "GET",
         });
         const data = await response.json();
-        if (data.success == true || data.success == false) {
-            setloading(false)
-        }
+
         setInfo(data.newssmall || {});
+        setloading(false)
     }
 
     useEffect(() => {

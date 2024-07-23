@@ -189,6 +189,7 @@ const SearchPage = () => {
             //     theme: "light",
             //     transition: Bounce,
             // });
+            setloading(false)
             setData([]);
         }
     }
