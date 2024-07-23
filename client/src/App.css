@@ -72,6 +72,22 @@ body {
   width: 69%;
 }
 
+.homecard img {
+  transition: transform 0.3s ease-in-out;
+}
+
+.homecard h3:hover{
+  color: blue;
+}
+
+.homecard h6:hover{
+  color: red;
+}
+
+.homecard img:hover {
+  transform: scale(1.1);
+}
+
 .homecardtext {
   display: flex;
   flex-direction: column;
@@ -266,12 +282,21 @@ body {
 .homecardintern img {
   height: 170px;
   width: 170px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.homecardintern img:hover{
+  transform: scale(1.1);
 }
 
 .homecardtextintern {
   display: flex;
   flex-direction: column;
   justify-content: center;
+}
+
+.homecardintern h3:hover{
+  color: blue;
 }
 
 
@@ -550,7 +575,7 @@ body {
     gap: 6px;
   }
 
-  .footer ul{
+  .footer ul {
     padding: 0px;
   }
 
@@ -589,7 +614,7 @@ body {
     margin: 0;
   }
 
-  .content{
+  .content {
     padding: 0px;
   }
 
