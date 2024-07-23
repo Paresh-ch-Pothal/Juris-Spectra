@@ -8,9 +8,12 @@ const InternPage = () => {
     const [loading, setloading] = useState(false)
     // const host = "http://localhost:5000";
 
+    const apiUrl = process.env.REACT_APP_API_URL;
+
+
     const fetchintern = async () => {
         setloading(true)
-        const response = await fetch(`https://juris-spectra.vercel.app/api/fetchinternid/${id}`, {
+        const response = await fetch(`${apiUrl}/api/fetchinternid/${id}`, {
             method: "GET",
         });
         const data = await response.json();

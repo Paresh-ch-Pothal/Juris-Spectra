@@ -7,9 +7,12 @@ const VisitPageLarge = () => {
     const [loading,setloading]=useState(false)
     // const host = "http://localhost:5000";
 
+    const apiUrl = process.env.REACT_APP_API_URL;
+
+
     const fetchLargeNews = async () => {
         setloading(true)
-        const response = await fetch(`https://juris-spectra.vercel.app/api/fetchnewslargeid/${id}`, {
+        const response = await fetch(`${apiUrl}/api/fetchnewslargeid/${id}`, {
             method: "GET",
         });
         const data = await response.json();

@@ -38,9 +38,12 @@ const SearchPage = () => {
     const searchQuery = queryParams.get("search");
     // console.log(searchQuery)
 
+    const apiUrl = process.env.REACT_APP_API_URL;
+
+
     const searchData = async (query) => {
         setloading(true)
-        const response = await fetch(`https://juris-spectra.vercel.app/api/searchdataintern?search=${encodeURIComponent(query)}`, {
+        const response = await fetch(`${apiUrl}/api/searchdataintern?search=${encodeURIComponent(query)}`, {
             method: "GET",
         });
         const json = await response.json();
@@ -101,7 +104,7 @@ const SearchPage = () => {
                 transition={Bounce}
             /> */}
 
-{loading ? (
+            {loading ? (
                 <div className="text-center">
                     <div className="spinner-border" role="status">
                         <span className="visually-hidden">Loading...</span>

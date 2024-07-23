@@ -3,6 +3,9 @@ import { ToastContainer, toast, Bounce } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 const AddIntern = () => {
+
+    const apiUrl = process.env.REACT_APP_API_URL;
+
     const [sections, setSections] = useState([{ id: 1, h1: '', sub1: '', link: '', table: '', desc: '' }]);
     const [formData, setFormData] = useState({
         title: '',
@@ -35,7 +38,7 @@ const AddIntern = () => {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-        const response = await fetch(`https://juris-spectra.vercel.app/api/addintern`, {
+        const response = await fetch(`${apiUrl}/api/addintern`, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"

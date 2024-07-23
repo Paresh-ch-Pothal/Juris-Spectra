@@ -9,6 +9,9 @@ import SearchPageIntern from './SearchPageIntern';
 
 const Internship = () => {
 
+    const apiUrl = process.env.REACT_APP_API_URL;
+
+
     // const host = "http://localhost:5000";
     const [intern, setintern] = useState([])
     const [count, setcount] = useState(5);
@@ -19,7 +22,7 @@ const Internship = () => {
 
     const getintern = async () => {
         setloading(true)
-        const response = await fetch(`https://juris-spectra.vercel.app/api/fetchintern`, {
+        const response = await fetch(`${apiUrl}/api/fetchintern`, {
             method: "GET",
 
         });

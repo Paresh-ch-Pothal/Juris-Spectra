@@ -12,9 +12,12 @@ const Contact = () => {
 
     // const host = "http://localhost:5000";
 
+    const apiUrl = process.env.REACT_APP_API_URL;
+
+
     const handleSubmit = async (e) => {
         e.preventDefault();
-        const response = await fetch(`https://juris-spectra.vercel.app/api/user`, {
+        const response = await fetch(`${apiUrl}/api/user`, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
