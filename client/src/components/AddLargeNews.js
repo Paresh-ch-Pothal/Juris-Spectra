@@ -43,7 +43,7 @@ const AddLargeNews = () => {
             headers: {
                 "Content-Type": "application/json"
             },
-            body: JSON.stringify({ title: formData.title, author: formData.author, homedesc: formData.homedesc, imglink: formData.imglink, desc: sections })
+            body: JSON.stringify({ title: formData.title, author: formData.author, homedesc: formData.homedesc, newsimg: formData.imglink, desc: sections })
         })
 
         const data = await response.json();
