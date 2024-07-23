@@ -7,11 +7,6 @@ const NewsSmall = require("../models/newsSmall");
 const app = express();
 app.use(express.static(path.join(__dirname, 'public')));
 
-function toSentenceCase(str) {
-    str = str.trim();
-    if (str.length === 0) return str;
-    return str.charAt(0).toUpperCase() + str.slice(1).toLowerCase();
-}
 
 const storage = multer.diskStorage({
     destination: function (req, file, cb) {
@@ -47,11 +42,10 @@ router.post("/addnewssmall", upload.single("newsimg"), async (req, res) => {
 router.get("/fetchnewssmall", async (req, res) => {
     try {
         const newssmall = await NewsSmall.find({}).sort({ createdAt: -1 });
-        return res.status(200).json({ success: true, message: "Successfully fetch all the blogs", formattedNewssmall })
+        return res.status(200).json({ success: true, message: "Successfully fetch all the blogs", newssmall })
     } catch (error) {
         return res.status(500).send({ success: false, message: "some Internal Error" });
     }
-
 })
 
 //fetch all small news by id
