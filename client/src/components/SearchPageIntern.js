@@ -49,32 +49,32 @@ const SearchPage = () => {
         const json = await response.json();
         // console.log(json)
         if (json.success) {
-            toast.success(json.message, {
-                position: "top-left",
-                autoClose: 3000,
-                hideProgressBar: false,
-                closeOnClick: true,
-                pauseOnHover: true,
-                draggable: true,
-                progress: undefined,
-                theme: "light",
-                transition: Bounce,
-            });
+            // toast.success(json.message, {
+            //     position: "top-left",
+            //     autoClose: 3000,
+            //     hideProgressBar: false,
+            //     closeOnClick: true,
+            //     pauseOnHover: true,
+            //     draggable: true,
+            //     progress: undefined,
+            //     theme: "light",
+            //     transition: Bounce,
+            // });
             setdata(json.result || [])
             setloading(false)
         }
         else {
-            toast.error('No Such results Found', {
-                position: "top-left",
-                autoClose: 3000,
-                hideProgressBar: false,
-                closeOnClick: true,
-                pauseOnHover: true,
-                draggable: true,
-                progress: undefined,
-                theme: "light",
-                transition: Bounce,
-            });
+            // toast.error('No Such results Found', {
+            //     position: "top-left",
+            //     autoClose: 3000,
+            //     hideProgressBar: false,
+            //     closeOnClick: true,
+            //     pauseOnHover: true,
+            //     draggable: true,
+            //     progress: undefined,
+            //     theme: "light",
+            //     transition: Bounce,
+            // });
             setloading(false)
             setdata([])
         }
