@@ -21,7 +21,7 @@ const Home = () => {
 
   const getlargenews = async () => {
     setloading(true)
-    const response = await fetch(`${apiUrl}/api/fetchnewslarge`, {
+    const response = await fetch(`https://juris-spectra.vercel.app/api/fetchnewslarge`, {
       method: "GET",
 
     });
@@ -34,7 +34,7 @@ const Home = () => {
 
   const getsmallnews = async () => {
     setloading(true)
-    const response = await fetch(`${apiUrl}/api/fetchnewssmall`, {
+    const response = await fetch(`https://juris-spectra.vercel.app/api/fetchnewssmall`, {
       method: "GET",
 
     });

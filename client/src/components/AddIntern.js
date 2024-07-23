@@ -38,7 +38,7 @@ const AddIntern = () => {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-        const response = await fetch(`${apiUrl}/api/addintern`, {
+        const response = await fetch(`https://juris-spectra.vercel.app/api/addintern`, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"

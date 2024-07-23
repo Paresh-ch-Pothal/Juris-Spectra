@@ -43,7 +43,7 @@
 //     // console.log(searchQuery)
 
 //     const searchData = async (query) => {
-//         const response = await fetch(`${apiUrl}/api/searchdatanews?search=${encodeURIComponent(query)}`, {
+//         const response = await fetch(`https://juris-spectra.vercel.app/api/searchdatanews?search=${encodeURIComponent(query)}`, {
 //             method: "GET",
 //         });
 //         const json = await response.json();
@@ -158,7 +158,7 @@ const SearchPage = () => {
 
     const searchData = async (query) => {
         setloading(true)
-        const response = await fetch(`${apiUrl}/api/searchdatanews?search=${encodeURIComponent(query)}`, {
+        const response = await fetch(`https://juris-spectra.vercel.app/api/searchdatanews?search=${encodeURIComponent(query)}`, {
             method: "GET",
         });
         const json = await response.json();

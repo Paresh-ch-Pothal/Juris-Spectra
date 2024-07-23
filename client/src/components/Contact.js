@@ -17,7 +17,7 @@ const Contact = () => {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-        const response = await fetch(`${apiUrl}/api/user`, {
+        const response = await fetch(`https://juris-spectra.vercel.app/api/user`, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"

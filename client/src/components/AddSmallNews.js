@@ -38,7 +38,7 @@ const AddSmallNews = () => {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-        const response = await fetch(`${apiUrl}/api/addnewssmall`, {
+        const response = await fetch(`https://juris-spectra.vercel.app/api/addnewssmall`, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"

@@ -13,7 +13,7 @@ const InternPage = () => {
 
     const fetchintern = async () => {
         setloading(true)
-        const response = await fetch(`${apiUrl}/api/fetchinternid/${id}`, {
+        const response = await fetch(`https://juris-spectra.vercel.app/api/fetchinternid/${id}`, {
             method: "GET",
         });
         const data = await response.json();
