@@ -7,6 +7,12 @@ const NewsLarge = require("../models/newsLarge");
 const app = express();
 app.use(express.static(path.join(__dirname, 'public')));
 
+function toSentenceCase(str) {
+    str = str.trim();
+    if (str.length === 0) return str;
+    return str.charAt(0).toUpperCase() + str.slice(1).toLowerCase();
+}
+
 const storage = multer.diskStorage({
     destination: function (req, file, cb) {
         cb(null, path.resolve(`./public/uploads`));
@@ -42,7 +48,11 @@ router.post("/addnewslarge", upload.single("newsimg"), async (req, res) => {
 router.get("/fetchnewslarge", async (req, res) => {
     try {
         const newslarge = await NewsLarge.find({}).sort({ createdAt: -1 });
-        return res.status(200).json({ success: true, message: "Successfully fetch all the blogs", newslarge })
+        const formattedNewssmall = newslarge.map(item => ({
+            ...item._doc,
+            homedesc: toSentenceCase(item.homedesc)
+        }));
+        return res.status(200).json({ success: true, message: "Successfully fetch all the blogs", formattedNewssmall })
     } catch (error) {
         return res.status(500).send({ success: false, message: "some Internal Error" });
     }

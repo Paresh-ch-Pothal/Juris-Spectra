@@ -11,6 +11,16 @@ const AddLargeNews = () => {
         imglink: ''
     });
 
+    const secret = "G3$gk8L!p2N^r4V@q7Wz";
+    const [auth, setauth] = useState(false)
+    const [input, setinput] = useState('')
+
+    const handleAuthorized = () => {
+        if (input === secret) {
+            setauth(true)
+        }
+    }
+
     const addSection = () => {
         setSections([
             ...sections,
@@ -80,67 +90,89 @@ const AddLargeNews = () => {
     };
 
     return (
-        <div className="container">
-            <ToastContainer
-                position="top-left"
-                autoClose={1500}
-                hideProgressBar={false}
-                newestOnTop={false}
-                closeOnClick
-                rtl={false}
-                pauseOnFocusLoss
-                draggable
-                pauseOnHover
-                theme="light"
-                transition={Bounce}
-            />
-            <form onSubmit={handleSubmit}>
-                <div className="mb-3">
-                    <label htmlFor="title" className="form-label">Heading</label>
-                    <input type="text" className="form-control" id="title" name="title" onChange={handleFormChange} />
-                </div>
-                <div className="mb-3">
-                    <label htmlFor="author" className="form-label">Author</label>
-                    <input type="text" className="form-control" id="author" name="author" onChange={handleFormChange} />
-                </div>
-                <div className="mb-3">
-                    <label htmlFor="homeDescription" className="form-label">Home Description</label>
-                    <input type="text" className="form-control" id="homedesc" name="homedesc" onChange={handleFormChange} />
-                </div>
-                <div className="mb-3">
-                    <label htmlFor="imageLink" className="form-label">Image Link</label>
-                    <input type="text" className="form-control" id="imglink" name="imglink" onChange={handleFormChange} />
-                </div>
-
-                {sections.map((section, index) => (
-                    <div key={section.id}>
-                        <div className="mb-3">
-                            <label htmlFor={`h1-${section.id}`} className="form-label">h1</label>
-                            <input type="text" className="form-control" id={`h1-${section.id}`} onChange={(e) => handleChange(e, index, 'h1')} />
-                        </div>
-                        <div className="mb-3">
-                            <label htmlFor={`sub1-${section.id}`} className="form-label">sub1</label>
-                            <input type="text" className="form-control" id={`sub1-${section.id}`} onChange={(e) => handleChange(e, index, 'sub1')} />
-                        </div>
-                        <div className="mb-3">
-                            <label htmlFor={`link-${section.id}`} className="form-label">link</label>
-                            <input type="text" className="form-control" id={`link-${section.id}`} onChange={(e) => handleChange(e, index, 'link')} />
-                        </div>
-                        <div className="mb-3">
-                            <label htmlFor={`table-${section.id}`} className="form-label">table</label>
-                            <input type="text" className="form-control" id={`table-${section.id}`} onChange={(e) => handleChange(e, index, 'table')} />
-                        </div>
-                        <div className="mb-3">
-                            <label htmlFor={`desc-${section.id}`} className="form-label">desc</label>
-                            <input type="text" className="form-control" id={`desc-${section.id}`} onChange={(e) => handleChange(e, index, 'desc')} />
-                        </div>
+        <>
+        {auth ? 
+            (<div className="container">
+                <h1 className='text-center'>Add Large News</h1>
+                <ToastContainer
+                    position="top-left"
+                    autoClose={1500}
+                    hideProgressBar={false}
+                    newestOnTop={false}
+                    closeOnClick
+                    rtl={false}
+                    pauseOnFocusLoss
+                    draggable
+                    pauseOnHover
+                    theme="light"
+                    transition={Bounce}
+                />
+                <form onSubmit={handleSubmit}>
+                    <div className="mb-3">
+                        <label htmlFor="title" className="form-label">Heading</label>
+                        <input type="text" className="form-control" id="title" name="title" onChange={handleFormChange} />
                     </div>
-                ))}
+                    <div className="mb-3">
+                        <label htmlFor="author" className="form-label">Author</label>
+                        <input type="text" className="form-control" id="author" name="author" onChange={handleFormChange} />
+                    </div>
+                    <div className="mb-3">
+                        <label htmlFor="homeDescription" className="form-label">Home Description</label>
+                        <input type="text" className="form-control" id="homedesc" name="homedesc" onChange={handleFormChange} />
+                    </div>
+                    <div className="mb-3">
+                        <label htmlFor="imageLink" className="form-label">Image Link</label>
+                        <input type="text" className="form-control" id="imglink" name="imglink" onChange={handleFormChange} />
+                    </div>
 
-                <button type="button" className="btn btn-primary mx-3 my-2" onClick={addSection}>Add More</button>
-                <button type="submit" className="btn btn-primary my-2">Submit</button>
-            </form>
-        </div>
+                    {sections.map((section, index) => (
+                        <div key={section.id}>
+                            <div className="mb-3">
+                                <label htmlFor={`h1-${section.id}`} className="form-label">h1</label>
+                                <input type="text" className="form-control" id={`h1-${section.id}`} onChange={(e) => handleChange(e, index, 'h1')} />
+                            </div>
+                            <div className="mb-3">
+                                <label htmlFor={`sub1-${section.id}`} className="form-label">sub1</label>
+                                <input type="text" className="form-control" id={`sub1-${section.id}`} onChange={(e) => handleChange(e, index, 'sub1')} />
+                            </div>
+                            <div className="mb-3">
+                                <label htmlFor={`link-${section.id}`} className="form-label">link</label>
+                                <input type="text" className="form-control" id={`link-${section.id}`} onChange={(e) => handleChange(e, index, 'link')} />
+                            </div>
+                            <div className="mb-3">
+                                <label htmlFor={`table-${section.id}`} className="form-label">table</label>
+                                <input type="text" className="form-control" id={`table-${section.id}`} onChange={(e) => handleChange(e, index, 'table')} />
+                            </div>
+                            <div className="mb-3">
+                                <label htmlFor={`desc-${section.id}`} className="form-label">desc</label>
+                                <input type="text" className="form-control" id={`desc-${section.id}`} onChange={(e) => handleChange(e, index, 'desc')} />
+                            </div>
+                        </div>
+                    ))}
+
+                    <button type="button" className="btn btn-primary mx-3 my-2" onClick={addSection}>Add More</button>
+                    <button type="submit" className="btn btn-primary my-2">Submit</button>
+                </form>
+            </div>) : (<div className="mb-3 container">
+                    <label htmlFor="input" className="form-label">Authorized</label>
+                    <input
+                        type="text"
+                        className="form-control"
+                        id="input"
+                        name="input"
+                        value={input}
+                        onChange={(e) => setinput(e.target.value)} // Correctly placed on the input
+                    />
+                    <button
+                        onClick={handleAuthorized}
+                        type="button"
+                        className="btn btn-primary my-2"
+                    >
+                        Submit
+                    </button>
+                </div>
+            )}
+        </>
     );
 };
 

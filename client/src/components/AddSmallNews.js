@@ -35,6 +35,16 @@ const AddSmallNews = () => {
 
     const apiUrl = process.env.REACT_APP_API_URL;
 
+    const secret = "G3$gk8L!p2N^r4V@q7Wz";
+    const [auth, setauth] = useState(false)
+    const [input, setinput] = useState('')
+
+    const handleAuthorized = () => {
+        if (input === secret) {
+            setauth(true)
+        }
+    }
+
 
     const handleSubmit = async (e) => {
         e.preventDefault();
@@ -80,7 +90,10 @@ const AddSmallNews = () => {
     };
 
     return (
-        <div className="container">
+        <>
+        {auth ? 
+        (<div className="container">
+            <h1 className='text-center'>Add Small News</h1>
             <ToastContainer
                 position="top-left"
                 autoClose={1500}
@@ -140,7 +153,26 @@ const AddSmallNews = () => {
                 <button type="button" className="btn btn-primary mx-3 my-2" onClick={addSection}>Add More</button>
                 <button type="submit" className="btn btn-primary my-2">Submit</button>
             </form>
-        </div>
+        </div>) : (<div className="mb-3 container">
+                    <label htmlFor="input" className="form-label">Authorized</label>
+                    <input
+                        type="text"
+                        className="form-control"
+                        id="input"
+                        name="input"
+                        value={input}
+                        onChange={(e) => setinput(e.target.value)} // Correctly placed on the input
+                    />
+                    <button
+                        onClick={handleAuthorized}
+                        type="button"
+                        className="btn btn-primary my-2"
+                    >
+                        Submit
+                    </button>
+                </div>
+            )}
+        </>
     );
 };
 
