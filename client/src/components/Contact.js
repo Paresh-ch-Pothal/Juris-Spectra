@@ -38,6 +38,9 @@ const Contact = () => {
                 theme: "dark",
                 transition: Slide,
             });
+            setuser({
+                name: '',email: '',phone: '',message: ''
+            })
         }
         else {
             toast.error(data.message, {
