@@ -6,13 +6,14 @@ import NewsTicker from './NewsTicker';
 // import { ToastContainer, toast ,Bounce} from 'react-toastify';
 // import 'react-toastify/dist/ReactToastify.css';
 
-const Navbar = () => {
+const Navbar = ({togglemode,mode}) => {
 
     // const host = "http://localhost:5000";
 
 
     const [search, setsearch] = useState('')
     let history = useNavigate();
+
 
     const handleSearchSubmit = (e) => {
         e.preventDefault()
@@ -80,11 +81,11 @@ const Navbar = () => {
         'Weather Alert: Heavy rain expected tomorrow!',
         'Weather Alert: Heavy rain expected tomorrow!',
         // Add more headlines as needed
-      ];
+    ];
 
     return (
         <>
-            <div>
+            <div >
                 {/* <ToastContainer
                     position="top-left"
                     autoClose={3000}
@@ -105,6 +106,7 @@ const Navbar = () => {
                         <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                             <span className="navbar-toggler-icon"></span>
                         </button>
+
                         <div className="collapse navbar-collapse" id="navbarSupportedContent">
                             <ul className="navbar-nav me-auto mb-2 mb-lg-0">
                                 <li className="nav-item">
@@ -128,6 +130,9 @@ const Navbar = () => {
                                 <li className="nav-item">
                                     <Link className="nav-link mx-1" to="/contact">Contact</Link>
                                 </li>
+                                <div className="form-check form-switch mx-2 my-2">
+                                    <input onClick={()=>{togglemode(mode)}} className="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault" />
+                                </div>
                             </ul>
                             <form className="d-flex" role="search" onSubmit={handleSearchSubmit}>
                                 <input style={{ display: location.pathname === "/internship" ? "none" : "block" }} onChange={handleOnchange} className="form-control me-2" type="search" id='search' name='search' value={search} placeholder="Search" aria-label="Search" />
@@ -138,7 +143,7 @@ const Navbar = () => {
                 </nav>
             </div>
 
-            <NewsTicker headlines={headlines}/>
+            <NewsTicker headlines={headlines} />
         </>
 
 

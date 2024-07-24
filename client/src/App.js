@@ -37,31 +37,45 @@ function App() {
     };
   }, []);
 
+  const [mode, setmode] = useState("light")
+  const togglemode = (mode) => {
+    if (mode == "light") {
+      setmode("dark")
+      document.body.style.backgroundColor = "#121212"
+      document.body.style.color = "white"
+    }
+    else {
+      setmode("light")
+      document.body.style.backgroundColor = "white"
+      document.body.style.color = "black"
+    }
+  }
+
   return (
     <>
       <div className='cursor-circle'
         style={{ left: `${position.x}px`, top: `${position.y}px` }}>
       </div>
       <Router>
-        <Navbar />
+        <Navbar togglemode={togglemode} mode={mode} />
         <div className='margin-top'>
           <Routes>
-            <Route exact path="/" element={<Home />} />
-            <Route exact path="/about" element={<About />} />
-            <Route exact path="/visitpagelarge/:id" element={<VisitPageLarge />} />
-            <Route exact path="/visitpagesmall/:id" element={<VisitPageSmall />} />
-            <Route exact path="/searchpagenews" element={<SearchPageNews />} />
-            <Route exact path="/searchpageintern" element={<SearchPageIntern />} />
-            <Route exact path="/internship" element={<Internship />} />
-            <Route exact path="/internpage/:id" element={<InternPage />} />
-            <Route exact path="/privacypolicy" element={<PrivacyPolicy />} />
-            <Route exact path="/contact" element={<Contact />} />
-            <Route exact path="/newsticker" element={<NewsTicker/>} />
-            <Route exact path="/addlargenews" element={<AddLargeNews />} />
-            <Route exact path="/addsmallnews" element={<AddSmallNews />} />
-            <Route exact path="/addintern" element={<AddIntern />} />
-            <Route exact path="/teammembers" element={<TeamMembers />} />
-            <Route exact path="/event" element={<Event />} />
+            <Route exact path="/" element={<Home mode={mode}/>} />
+            <Route exact path="/about" element={<About mode={mode}/>} />
+            <Route exact path="/visitpagelarge/:id" element={<VisitPageLarge mode={mode}/>} />
+            <Route exact path="/visitpagesmall/:id" element={<VisitPageSmall mode={mode}/>} />
+            <Route exact path="/searchpagenews" element={<SearchPageNews mode={mode}/>} />
+            <Route exact path="/searchpageintern" element={<SearchPageIntern mode={mode}/>} />
+            <Route exact path="/internship" element={<Internship mode={mode}/>} />
+            <Route exact path="/internpage/:id" element={<InternPage mode={mode}/>} />
+            <Route exact path="/privacypolicy" element={<PrivacyPolicy mode={mode}/>} />
+            <Route exact path="/contact" element={<Contact mode={mode}/>} />
+            <Route exact path="/newsticker" element={<NewsTicker mode={mode}/>} />
+            <Route exact path="/addlargenews" element={<AddLargeNews mode={mode}/>} />
+            <Route exact path="/addsmallnews" element={<AddSmallNews mode={mode}/>} />
+            <Route exact path="/addintern" element={<AddIntern mode={mode}/>} />
+            <Route exact path="/teammembers" element={<TeamMembers mode={mode}/>} />
+            <Route exact path="/event" element={<Event mode={mode}/>} />
           </Routes>
         </div>
         <Footer />
