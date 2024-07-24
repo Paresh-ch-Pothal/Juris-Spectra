@@ -1,8 +1,16 @@
 import React from 'react'
+import { Helmet } from 'react-helmet'
 
 const Event = () => {
     return (
         <>
+            <Helmet>
+                <title>Events - Juris Spectra</title>
+                <meta name="description" content="Stay updated with the latest events in the legal industry. Juris Spectra provides information on upcoming legal events, seminars, and conferences to help you stay informed and connected." />
+                <meta name="keywords" content="Juris Spectra, legal events, seminars, conferences, legal industry, event updates" />
+                <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+                <meta charset="UTF-8" />
+            </Helmet>
             <div className="event">
                 <h1 className='pric'>Event</h1>
                 <div className="box-event">

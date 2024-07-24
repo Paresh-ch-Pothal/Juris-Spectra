@@ -6,6 +6,7 @@ import { useNavigate } from 'react-router-dom';
 import instagram from '../assets/instagram.webp'
 import linkedin from '../assets/linkedin.webp'
 import NewsTicker from './NewsTicker';
+import { Helmet } from 'react-helmet';
 
 const Home = () => {
 
@@ -90,6 +91,13 @@ const Home = () => {
 
   return (
     <div style={{ overflowX: "hidden" }}>
+      <Helmet>
+        <title>Home - Juris Spectra</title>
+        <meta name="description" content="Welcome to Juris Spectra. Stay informed with the latest legal news and updates. Explore articles, news, and resources related to the legal industry." />
+        <meta name="keywords" content="Juris Spectra, legal news, legal updates, legal industry, articles, resources" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="UTF-8" />
+      </Helmet>
 
       <div className="homepage">
         <div className="right mt-4">

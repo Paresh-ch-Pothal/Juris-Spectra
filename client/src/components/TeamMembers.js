@@ -1,9 +1,17 @@
 import React from 'react'
 import jurisLogo from '../assets/juris_spectra_logo.jpg'
+import { Helmet } from 'react-helmet'
 
 const TeamMembers = () => {
     return (
         <>
+            <Helmet>
+                <title>Team Members - Juris Spectra</title>
+                <meta name="description" content="Meet the dedicated team behind Juris Spectra. Our team consists of experienced professionals committed to providing the best services and resources in the legal industry." />
+                <meta name="keywords" content="Juris Spectra, team members, legal professionals, experienced team, legal industry" />
+                <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+                <meta charset="UTF-8" />
+            </Helmet>
             <div className="team">
                 <h1 className="pric">Team Members</h1>
 

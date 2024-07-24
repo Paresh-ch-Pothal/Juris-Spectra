@@ -5,6 +5,7 @@ import { CiClock2 } from "react-icons/ci";
 // import { ToastContainer, toast, Bounce } from 'react-toastify';
 // import 'react-toastify/dist/ReactToastify.css';
 import SearchPageIntern from './SearchPageIntern';
+import { Helmet } from 'react-helmet';
 
 
 const Internship = () => {
@@ -126,6 +127,13 @@ const Internship = () => {
 
     return (
         <div>
+            <Helmet>
+                <title>Internships - Juris Spectra</title>
+                <meta name="description" content="Discover valuable internship opportunities in the legal industry. Juris Spectra provides a curated list of internships to help law students and professionals gain practical experience." />
+                <meta name="keywords" content="Juris Spectra, legal internships, internship opportunities, law students, legal industry, practical experience" />
+                <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+                <meta charset="UTF-8" />
+            </Helmet>
             {/* <ToastContainer
                 position="top-left"
                 autoClose={3000}

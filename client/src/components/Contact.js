@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { Helmet } from 'react-helmet';
 import { ToastContainer, toast, Slide } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
@@ -62,7 +63,15 @@ const Contact = () => {
     };
     return (
         <>
+            <Helmet>
+                <title>Contact Us - Juris Spectra</title>
+                <meta name="description" content="Get in touch with Juris Spectra. We are here to help with any questions or inquiries you may have. Contact us for more information about our services, partnerships, and opportunities in the legal industry." />
+                <meta name="keywords" content="Juris Spectra, contact us, legal inquiries, legal industry, partnerships, services, legal opportunities" />
+                <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+                <meta charset="UTF-8" />
+            </Helmet>
             <div className="conc">
+
                 <ToastContainer
                     position="top-left"
                     autoClose={3000}
