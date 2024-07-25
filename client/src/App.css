@@ -214,6 +214,22 @@ body {
   height: 300px;
 }
 
+/* .tablecontain{
+  width: 100%;
+  border: 2px solid black;
+} */
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.table th,
+.table td {
+  border: 1px solid #000;
+  padding: 8px;
+}
+
 
 /* //css for search page */
 .homecardsearch {
@@ -549,9 +565,7 @@ body {
     width: 93vw;
   }
 
-  .table {
-    width: 100%;
-  }
+  
 
 
   .homecardsearch {
