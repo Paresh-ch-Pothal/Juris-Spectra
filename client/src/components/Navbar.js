@@ -3,6 +3,8 @@ import jurisLogo from '../assets/juris_spectra_logo.jpg'
 import { Link, useLocation, useNavigate } from 'react-router-dom'
 import SearchPageNews from './SearchPageNews';
 import NewsTicker from './NewsTicker';
+import moon from '../assets/moon.svg'
+import sun from '../assets/sun.svg'
 // import { ToastContainer, toast ,Bounce} from 'react-toastify';
 // import 'react-toastify/dist/ReactToastify.css';
 
@@ -130,10 +132,14 @@ const Navbar = ({togglemode,mode}) => {
                                 <li className="nav-item">
                                     <Link className="nav-link mx-1" to="/contact">Contact</Link>
                                 </li>
-                                <div className="form-check form-switch mx-2 my-2">
+                                
+                                {/* <div className="form-check form-switch mx-2 my-2">
                                     <input onClick={()=>{togglemode(mode)}} className="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault" />
-                                </div>
+                                </div> */}
                             </ul>
+                            <div className="mode" style={{cursor: "pointer"}}>
+                                    {mode === "light" ? <img src={moon} onClick={()=>{togglemode(mode)}}/> : <img src={sun} onClick={()=>{togglemode(mode)}}/> }
+                            </div>
                             <form className="d-flex" role="search" onSubmit={handleSearchSubmit}>
                                 <input style={{ display: location.pathname === "/internship" ? "none" : "block" }} onChange={handleOnchange} className="form-control me-2" type="search" id='search' name='search' value={search} placeholder="Search" aria-label="Search" />
                                 <button style={{ display: location.pathname === "/internship" ? "none" : "block" }} className="btn btn-outline-success" type="submit">Search</button>

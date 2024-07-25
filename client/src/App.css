@@ -28,6 +28,10 @@ body {
   margin-top: 2vh;
 }
 
+.mode{
+  margin-right: 20px;
+}
+
 .homepage {
   height: 100%;
   width: 100%;
@@ -491,6 +495,12 @@ body {
 @media only screen and (max-width: 900px) {
   .margin-top {
     margin-top: 6.5vh;
+  }
+
+  .mode{
+    margin-bottom: 10px;
+    margin-right: 0px;
+    margin-left: 4px;
   }
 
   body {
