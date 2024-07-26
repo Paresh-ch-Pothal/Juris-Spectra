@@ -249,6 +249,18 @@ body {
   justify-content: center;
 }
 
+.homecardsearch img {
+  transition: transform 0.3s ease-in-out;
+}
+
+.homecardtextsearch h3:hover{
+  color: blue;
+}
+
+.homecardsearch img:hover {
+  transform: scale(1.1);
+}
+
 /* //css for footer */
 .footer {
   overflow-x: hidden;
