@@ -467,9 +467,10 @@ body {
 }
 
 .photo {
-  border-radius: 50%;
+  border-radius: 250px;
   height: 250px;
   width: 250px;
+  margin-bottom: 4px;
 }
 
 .team {

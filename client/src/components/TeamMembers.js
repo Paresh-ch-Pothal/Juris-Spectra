@@ -4,6 +4,8 @@ import { Helmet } from 'react-helmet'
 import team1 from '../assets/team1.jpg'
 import team3 from '../assets/team3.jpg'
 import team2 from '../assets/team2.jpg'
+import team4 from '../assets/team4.jpg'
+import team5 from '../assets/team5.jpg'
 
 const TeamMembers = () => {
     return (
@@ -24,30 +26,26 @@ const TeamMembers = () => {
 
                         <div className="flex-col">
                             <div className="photo-adjust"><img className='photo' src={team1} alt="image1" /></div>
-                            <p>Anuj Gupta - Founder, Juris Spectra</p>
+                            <p style={{textAlign: "center"}}>Anuj Gupta - Founder, Juris Spectra</p>
                         </div>
                         <div className="flex-col">
                             <div className="photo-adjust"><img className='photo' src={team3} alt="image1" /></div>
-                            <p>Gella Vimala, Co- founder</p>
+                            <p style={{textAlign: "center"}}>Gella Vimala, Co- founder</p>
                         </div>
                         <div className="flex-col">
                             <div className="photo-adjust"><img className='photo' src={team2} alt="image1" /></div>
-                            <p>Mansi Singh, Social Media Manager</p>
+                            <p style={{textAlign: "center"}}>Mansi Singh, Social Media Manager</p>
                         </div>
 
                     </div>
                     <div className="image two">
                         <div className="flex-col">
-                            <div className="photo-adjust"><img className='photo' src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSrOE-dqeqqqtM-fN8bSehkov-JGEtCcfDwBg&s" alt="image1" /></div>
-                            <p>Lorem ipsum dolor sit amet.</p>
+                            <div className="photo-adjust"><img className='photo' src={team4} alt="image1" /></div>
+                            <p style={{textAlign: "center"}}>Prem Chandra Prasad - Website Manager</p>
                         </div>
                         <div className="flex-col">
-                            <div className="photo-adjust"><img className='photo' src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSrOE-dqeqqqtM-fN8bSehkov-JGEtCcfDwBg&s" alt="image1" /></div>
-                            <p>Lorem ipsum dolor sit amet.</p>
-                        </div>
-                        <div className="flex-col">
-                            <div className="photo-adjust"><img className='photo' src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSrOE-dqeqqqtM-fN8bSehkov-JGEtCcfDwBg&s" alt="image1" /></div>
-                            <p>Lorem ipsum dolor sit amet.</p>
+                            <div className="photo-adjust"><img className='photo' src={team5} alt="image1" /></div>
+                            <p style={{textAlign: "center"}}>Paresh Chandra Pothal - Website Manager</p>
                         </div>
                     </div>
                 </div>

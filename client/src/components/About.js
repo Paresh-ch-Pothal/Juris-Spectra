@@ -1,6 +1,8 @@
 import React from 'react'
 // import '../../src/all.css';
 import { Helmet } from 'react-helmet'
+import team1 from '../assets/team1.jpg'
+import team3 from '../assets/team3.jpg'
 
 const About = ({mode}) => {
   return (
@@ -19,13 +21,13 @@ const About = ({mode}) => {
 
         <div className="founder flex" style={{ marginBottom: "40px" }}>
           <div className="leftabout">
-            <div><img src="" alt="founder" srcset="" />
-              <p>Lorem ipsum dolor sit amet.</p>
+            <div><img className='photo' src={team1} alt="founder" srcset="" />
+              <p style={{textAlign: "center"}}>Anuj Gupta - Founder, Juris Spectra</p>
             </div>
           </div>
           <div className="rightabout">
-            <div><img src="" alt="co-founder" srcset="" />
-              <p>Lorem ipsum dolor sit amet.</p>
+            <div><img style={{height: "250px",width: "250px",borderRadius: "250px"}} src={team3} alt="co-founder" srcset="" />
+              <p style={{textAlign: "center"}}>Gella Vimala, Co- founder</p>
             </div>
           </div>
         </div>
