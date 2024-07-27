@@ -47,7 +47,7 @@ const Event = ({ mode }) => {
                                 </span>
                             </div>
                         </div>
-                        <p>We are delighted to share that we have successfully conducted an informative and engaging webinar on the topic "New Laws are going to be implemented from 1st July!" This event aimed to shed light on the significant changes and their implications for the legal community.
+                        <p style={{marginTop: "10px"}}>We are delighted to share that we have successfully conducted an informative and engaging webinar on the topic "New Laws are going to be implemented from 1st July!" This event aimed to shed light on the significant changes and their implications for the legal community.
                         </p>
                     </div>
                 </div>
@@ -78,7 +78,7 @@ const Event = ({ mode }) => {
                                 </span>
                             </div>
                         </div>
-                        <p>We are thrilled to announce that we successfully conducted the webinar "Mastering Contract Drafting: Fundamentals to Freelancing Success." This event was designed to provide participants with advanced insights into contract drafting and strategies to elevate their freelancing careers.
+                        <p style={{marginTop: "10px"}}>We are thrilled to announce that we successfully conducted the webinar "Mastering Contract Drafting: Fundamentals to Freelancing Success." This event was designed to provide participants with advanced insights into contract drafting and strategies to elevate their freelancing careers.
 
                         </p></div>
                 </div>
