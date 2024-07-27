@@ -468,6 +468,8 @@ body {
 
 .photo {
   border-radius: 50%;
+  height: 250px;
+  width: 250px;
 }
 
 .team {
@@ -492,6 +494,18 @@ body {
 
 .text-event {
   padding: 20px 30px;
+}
+
+.inline-container {
+  display: flex;
+  align-items: baseline; 
+  margin-bottom: 7px;
+}
+.inline-container h6 {
+  margin: 0;
+}
+.inline-container span {
+  display: inline;
 }
 
 /* .testimonial? */
