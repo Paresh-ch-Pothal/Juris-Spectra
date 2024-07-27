@@ -372,7 +372,7 @@ body {
 
 /* about page css */
 .founder {
-  height: 70vh;
+  height: 100%;
   padding: 50px 10px;
   display: flex;
   justify-content: center;
