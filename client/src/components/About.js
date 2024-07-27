@@ -22,12 +22,12 @@ const About = ({mode}) => {
         <div className="founder flex" style={{ marginBottom: "40px" }}>
           <div className="leftabout">
             <div><img src={team1} alt="founder" srcset="" />
-              <p style={{textAlign: "center"}}>Anuj Gupta - Founder, Juris Spectra</p>
+              <p style={{textAlign: "center",marginTop: "10px"}}>Anuj Gupta - Founder, Juris Spectra</p>
             </div>
           </div>
           <div className="rightabout">
             <div><img src={team3} alt="co-founder" srcset="" />
-              <p style={{textAlign: "center"}}>Gella Vimala, Co- founder</p>
+              <p style={{textAlign: "center",marginTop: "10px"}}>Gella Vimala, Co- founder</p>
             </div>
           </div>
         </div>
