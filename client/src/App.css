@@ -502,6 +502,10 @@ body {
   padding: 20px 30px;
 }
 
+.eventh6{
+  text-decoration: underline;
+}
+
 .inline-container {
   display: flex;
   align-items: baseline; 

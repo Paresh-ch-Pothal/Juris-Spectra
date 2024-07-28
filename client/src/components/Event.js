@@ -28,21 +28,21 @@ const Event = ({ mode }) => {
                         </h4>
                         <div>
                             <div>
-                                <span><h6>Upcoming Legal Changes:</h6></span>
+                                <span><h6 className='eventh6'>Upcoming Legal Changes:</h6></span>
                                 <span>The focus of the webinar was on the Bharatiya Nagarik Suraksha Sanhita, Bharatiya Nyaya Sanhita, and Bharatiya Sakshya Adhiniyam, which will soon replace the Indian Penal Code, 1860, the Criminal Procedure Code, (1898), 1973, and the Indian Evidence Act, 1872.</span>
                             </div>
                             <div>
-                                <span><h6>Public Impact:</h6></span>
+                                <span><h6 className='eventh6'>Public Impact:</h6></span>
                                 <span>We explored the potential effects these changes will have on the general public.
                                 </span>
                             </div>
                             <div>
-                                <span><h6>Professional Challenges:</h6></span>
+                                <span><h6 className='eventh6'>Professional Challenges:</h6></span>
                                 <span>The session provided insights into the challenges that legal professionals might face with the new implementations.
                                 </span>
                             </div>
                             <div>
-                                <span><h6>Student Guidance:</h6></span>
+                                <span><h6 className='eventh6'>Student Guidance:</h6></span>
                                 <span>Law students received valuable advice on what to expect and how to prepare for the new legal landscape.
                                 </span>
                             </div>
@@ -63,17 +63,17 @@ const Event = ({ mode }) => {
                         </h4>
                         <div>
                             <div>
-                                <span><h6>Advanced Contract Drafting Techniques:</h6></span>
+                                <span><h6 className='eventh6'>Advanced Contract Drafting Techniques:</h6></span>
                                 <span>Participants gained expert insights into advanced contract drafting, enhancing their skills and proficiency.
                                 </span>
                             </div>
                             <div>
-                                <span><h6>Freelancing Success:</h6></span>
+                                <span><h6 className='eventh6'>Freelancing Success:</h6></span>
                                 <span>The session focused on strategies to propel freelancing careers to new heights, providing valuable tips and guidance.
                                 </span>
                             </div>
                             <div>
-                                <span><h6>Professional Networking:</h6></span>
+                                <span><h6 className='eventh6'>Professional Networking:</h6></span>
                                 <span> Attendees had the opportunity to connect with a community of driven professionals, fostering valuable networking opportunities.
                                 </span>
                             </div>
