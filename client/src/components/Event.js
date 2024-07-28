@@ -23,7 +23,7 @@ const Event = ({ mode }) => {
                     <div className="text-event">
                         <h1>Navigating New Laws with Kajal Pundir
                         </h1>
-                        <div><h4>Speaker: </h4><span>Kajal Pundir, Assistant Professor at CPJ College of Higher Studies & School of Law, IPU Delh</span></div>
+                        <div><h4>Speaker: </h4><span>Kajal Pundir, Assistant Professor at CPJ College of Higher Studies & School of Law, IPU Delhi</span></div>
                         <h4>Key Takeaways:
                         </h4>
                         <div>
