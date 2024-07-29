@@ -20,6 +20,7 @@ import AddIntern from './components/AddIntern';
 import TeamMembers from './components/TeamMembers';
 import Event from './components/Event';
 import { useEffect, useState } from 'react';
+import Navbar_top from './components/Navbar_top';
 
 
 function App() {
@@ -57,6 +58,7 @@ function App() {
         style={{ left: `${position.x}px`, top: `${position.y}px` }}>
       </div>
       <Router>
+        <Navbar_top/>
         <Navbar togglemode={togglemode} mode={mode} />
         <div className='margin-top'>
           <Routes>

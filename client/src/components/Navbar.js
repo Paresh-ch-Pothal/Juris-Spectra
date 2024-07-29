@@ -78,10 +78,10 @@ const Navbar = ({togglemode,mode}) => {
     // }, [searchQuery])
 
     const headlines = [
-        'Breaking News: Market hits an all-time high!',
-        'Sports Update: Local team wins championship!',
-        'Weather Alert: Heavy rain expected tomorrow!',
-        'Weather Alert: Heavy rain expected tomorrow!',
+        'Our Strength, Your Advantage',
+        'Our Strength, Your Advantage',
+        'Our Strength, Your Advantage',
+        'Our Strength, Your Advantage',
         // Add more headlines as needed
     ];
 
@@ -101,10 +101,8 @@ const Navbar = ({togglemode,mode}) => {
                     theme="light"
                     transition={Bounce}
 /> */}
-                <nav className="navbar navbar-expand-lg fixed-top bg-dark navbar-dark">
+                <nav className="navbar navbar-expand-lg fixed-top bg-dark navbar-dark" style={{position: "relative",top: "1vh"}}>
                     <div className="container-fluid">
-                        <img style={{ borderRadius: "120px" }} className='mx-2' src={jurisLogo} alt="Bootstrap" width="40" height="40" />
-                        <a className="navbar-brand" href="/">Juris Spectra</a>
                         <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                             <span className="navbar-toggler-icon"></span>
                         </button>
