@@ -118,7 +118,7 @@ const Navbar = ({togglemode,mode}) => {
                                 <li className="nav-item">
                                     <Link className="nav-link mx-1" to="/privacypolicy">Privacy Policy</Link>
                                 </li>
-                                <li className="nav-item">
+                                <li className="nav-item">  
                                     <Link className="nav-link mx-1" to="/internship">Internships</Link>
                                 </li>
                                 <li className="nav-item">
@@ -129,6 +129,9 @@ const Navbar = ({togglemode,mode}) => {
                                 </li>
                                 <li className="nav-item">
                                     <Link className="nav-link mx-1" to="/contact">Contact</Link>
+                                </li>
+                                <li className="nav-item">
+                                    <Link className="nav-link mx-1" to="/addintern">Add Internship</Link>
                                 </li>
                                 
                                 {/* <div className="form-check form-switch mx-2 my-2">

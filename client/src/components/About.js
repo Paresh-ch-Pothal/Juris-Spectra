@@ -17,7 +17,7 @@ const About = ({mode}) => {
       
       <div className="outer" >
         <h1 className='pric'>About us</h1>
-        <p className="box" style={{ marginBottom: "40px" }}>Hustling Learning is a platform dedicated to providing valuable educational resources and content. We focus on offering practical insights and strategies to help individuals enhance their skills and knowledge in various fields. Our mission is to empower learners to achieve their personal and professional goals through accessible and engaging materials. Whether you're looking to improve your career prospects, acquire new skills, or simply expand your knowledge, Hustling Learning is here to support your journey.</p>
+        <p className="box" style={{ marginBottom: "40px" }}>Juris Spectra is a platform dedicated to providing valuable educational resources and content. We focus on offering practical insights and strategies to help individuals enhance their skills and knowledge in various fields. Our mission is to empower learners to achieve their personal and professional goals through accessible and engaging materials. Whether you're looking to improve your career prospects, acquire new skills, or simply expand your knowledge, Hustling Learning is here to support your journey.</p>
 
         <div className="founder flex" style={{ marginBottom: "40px" }}>
           <div className="leftabout">

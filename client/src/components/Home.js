@@ -59,6 +59,19 @@ const Home = () => {
     return [year, month, day].join('-');
   }
 
+  function getdate() {
+    var d = new Date(),
+      month = '' + (d.getMonth() + 1),
+      day = '' + d.getDate(),
+      year = d.getFullYear();
+
+    if (month.length < 2)
+      month = '0' + month;
+    if (day.length < 2)
+      day = '0' + day;
+
+    return [year, month, day].join('-');
+  }
 
 
 
@@ -115,7 +128,9 @@ const Home = () => {
                     <>
                       <div key={news._id}>
                         <div className='homecard my-2'>
+
                           <img onClick={() => { handlelargeNews(news._id) }} style={{ cursor: "pointer" }} src={news.newsimg ? news.newsimg : "https://www.livelaw.in/cms/wp-content/uploads/2013/11/Law-School-Internship.jpg"} alt="" />
+
                           <div className='homecardtext'>
                             <h3 onClick={() => { handlelargeNews(news._id) }} style={{ cursor: "pointer" }} className='mx-2'>{news.title}</h3>
                             <div className='author'>
@@ -157,8 +172,9 @@ const Home = () => {
                 if (index < cousmall)
                   return (
 
-
                     <div className='homecard my-2' key={news._id}>
+
+
                       <img className='leftimg' style={{ cursor: "pointer" }} onClick={() => { handlesmallNews(news._id) }} src={news.newsimg ? news.newsimg : "https://www.livelaw.in/cms/wp-content/uploads/2013/11/Law-School-Internship.jpg"} alt="" />
                       <div className='homecardtext'>
                         <h6 style={{ cursor: "pointer" }} onClick={() => { handlesmallNews(news._id) }} className='mx-2'>{news.title}</h6>
